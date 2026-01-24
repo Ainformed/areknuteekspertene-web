@@ -339,24 +339,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section className="py-10 md:py-16 bg-white border-y border-[var(--color-sage-light)]">
-        <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
-            {[
-              { number: "2009", label: "Etablert" },
-              { number: "15+", label: "Års erfaring" },
-              { number: "2", label: "Klinikker" },
-              { number: "Spesialist", label: "Karkirurg" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="stat-number mb-1 md:mb-2">{stat.number}</div>
-                <div className="text-[var(--color-charcoal-light)] text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section id="behandlinger" className="py-[var(--section-padding)] bg-gradient-section">
