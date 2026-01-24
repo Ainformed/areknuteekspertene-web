@@ -112,6 +112,25 @@ const testimonials = [
   }
 ];
 
+// Price Data
+const priceData = {
+  konsultasjon: [
+    { name: "Forundersøkelse med ultralyd", price: "1 200", note: "Trekkes fra ved behandling" },
+    { name: "Kontroll etter behandling", price: "0", note: "Inkludert" },
+  ],
+  behandlinger: [
+    { name: "Laserbehandling (EVLA) - ett ben", price: "12 000", note: "Gullstandard" },
+    { name: "Laserbehandling (EVLA) - begge ben", price: "20 000", note: "Samme dag" },
+    { name: "Skumbehandling - per behandling", price: "4 500", note: "" },
+    { name: "Mikroflebektomi - per ben", price: "8 000", note: "" },
+    { name: "Kombinasjonsbehandling", price: "Fra 15 000", note: "Tilpasset ditt behov" },
+  ],
+  tillegg: [
+    { name: "Kompresjonsstrømper (per par)", price: "450", note: "Anbefalt etter behandling" },
+    { name: "Ekstra skumbehandling", price: "2 500", note: "Ved behov" },
+  ],
+};
+
 // Services Data
 const services = [
   {
@@ -138,6 +157,7 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [priceModalOpen, setPriceModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -173,6 +193,12 @@ export default function Home() {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
+            <button
+              onClick={() => setPriceModalOpen(true)}
+              className="nav-link cursor-pointer"
+            >
+              Se priser
+            </button>
             <a href="tel:40044600" className="flex items-center gap-2 text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
               <PhoneIcon />
               <span className="font-medium">400 44 600</span>
@@ -201,6 +227,12 @@ export default function Home() {
               <a href="#om-oss" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>Om oss</a>
               <a href="#faq" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
               <a href="#kontakt" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
+              <button
+                onClick={() => { setMobileMenuOpen(false); setPriceModalOpen(true); }}
+                className="py-2 text-lg text-left text-[var(--color-forest)] font-medium"
+              >
+                Se priser
+              </button>
               <div className="pt-4 border-t border-[var(--color-sage-light)]">
                 <a href="tel:40044600" className="flex items-center gap-2 py-2">
                   <PhoneIcon />
@@ -617,6 +649,136 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Price Modal */}
+      {priceModalOpen && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+          onClick={() => setPriceModalOpen(false)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in" />
+
+          {/* Modal */}
+          <div
+            className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fade-in-up shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="bg-[var(--color-forest)] px-6 py-5 flex justify-between items-center">
+              <div>
+                <h2 className="text-2xl font-serif text-white">Prisliste</h2>
+                <p className="text-white/70 text-sm">Åreknuteekspertene 2024</p>
+              </div>
+              <button
+                onClick={() => setPriceModalOpen(false)}
+                className="text-white/80 hover:text-white transition-colors p-1"
+                aria-label="Lukk"
+              >
+                <CloseIcon />
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
+              {/* Konsultasjon */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-[var(--color-forest)] mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-sm">1</span>
+                  Konsultasjon
+                </h3>
+                <div className="space-y-3">
+                  {priceData.konsultasjon.map((item, index) => (
+                    <div key={index} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-0">
+                      <div>
+                        <span className="text-[var(--color-charcoal)]">{item.name}</span>
+                        {item.note && (
+                          <span className="block text-sm text-[var(--color-forest)] mt-0.5">{item.note}</span>
+                        )}
+                      </div>
+                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap ml-4">
+                        {item.price === "0" ? "Gratis" : `kr ${item.price},-`}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Behandlinger */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-[var(--color-forest)] mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-sm">2</span>
+                  Behandlinger
+                </h3>
+                <div className="space-y-3">
+                  {priceData.behandlinger.map((item, index) => (
+                    <div key={index} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-0">
+                      <div>
+                        <span className="text-[var(--color-charcoal)]">{item.name}</span>
+                        {item.note && (
+                          <span className="block text-sm text-[var(--color-charcoal-light)] mt-0.5">{item.note}</span>
+                        )}
+                      </div>
+                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap ml-4">
+                        kr {item.price},-
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tillegg */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-[var(--color-forest)] mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-sm">3</span>
+                  Tillegg
+                </h3>
+                <div className="space-y-3">
+                  {priceData.tillegg.map((item, index) => (
+                    <div key={index} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-0">
+                      <div>
+                        <span className="text-[var(--color-charcoal)]">{item.name}</span>
+                        {item.note && (
+                          <span className="block text-sm text-[var(--color-charcoal-light)] mt-0.5">{item.note}</span>
+                        )}
+                      </div>
+                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap ml-4">
+                        kr {item.price},-
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Info box */}
+              <div className="bg-[var(--color-sage-light)] rounded-xl p-4 mt-6">
+                <p className="text-sm text-[var(--color-forest)]">
+                  <strong>Forsikring:</strong> De fleste helseforsikringer dekker behandling av åreknuter.
+                  Vi hjelper deg med nødvendig dokumentasjon.
+                </p>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="px-6 py-4 bg-gray-50 border-t flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                className="btn-primary flex-1 justify-center"
+              >
+                Bestill forundersøkelse
+                <ArrowRightIcon />
+              </a>
+              <a
+                href="tel:40044600"
+                className="btn-secondary flex-1 justify-center"
+              >
+                <PhoneIcon />
+                Ring oss
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
