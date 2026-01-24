@@ -611,17 +611,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Medical Disclaimer */}
-      <section className="py-6 md:py-8 bg-[var(--color-cream-dark)] border-t border-[var(--color-sage-light)]">
-        <div className="container-wide">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xs md:text-sm text-[var(--color-charcoal-light)] leading-relaxed">
-              <strong className="text-[var(--color-charcoal)]">Medisinsk informasjon:</strong> Innholdet på denne nettsiden er kun ment som generell informasjon og erstatter ikke profesjonell medisinsk rådgivning, diagnose eller behandling. Resultater kan variere fra person til person. Konsulter alltid kvalifisert helsepersonell for vurdering av din individuelle situasjon. Alle behandlinger utføres av autorisert helsepersonell.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="footer py-10 md:py-16">
         <div className="container-wide">
