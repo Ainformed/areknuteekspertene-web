@@ -59,6 +59,13 @@ const CloseIcon = () => (
   </svg>
 );
 
+const EmailIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <path d="M3.333 3.333h13.334c.916 0 1.666.75 1.666 1.667v10c0 .917-.75 1.667-1.666 1.667H3.333c-.916 0-1.666-.75-1.666-1.667V5c0-.917.75-1.667 1.666-1.667z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M18.333 5L10 10.833 1.667 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 // FAQ Data
 const faqData = [
   {
@@ -471,6 +478,7 @@ export default function Home() {
                 address: "Sørkedalsveien 10A",
                 postal: "0369 Oslo",
                 phone: "400 44 600",
+                email: "post@areknuteekspertene.no",
                 hours: "Man-Fre: 08:00-16:00"
               },
               {
@@ -478,7 +486,8 @@ export default function Home() {
                 address: "Storgata 94",
                 postal: "9008 Tromsø",
                 phone: "400 44 600",
-                hours: "Man-Fre: 09:00-15:00"
+                email: "post@areknuteekspertene.no",
+                hours: "Man-Fre: 08:00-16:00"
               }
             ].map((location, index) => (
               <div key={index} className="card">
@@ -496,6 +505,10 @@ export default function Home() {
                   <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
                     <PhoneIcon />
                     <span>{location.phone}</span>
+                  </a>
+                  <a href={`mailto:${location.email}`} className="flex items-center gap-3 text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
+                    <EmailIcon />
+                    <span>{location.email}</span>
                   </a>
                   <div className="flex items-center gap-3 text-[var(--color-charcoal-light)]">
                     <ClockIcon />
@@ -555,10 +568,14 @@ export default function Home() {
                 Vi kombinerer medisinsk ekspertise med omsorg for å gi deg
                 best mulig resultat.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col gap-3">
                 <a href="tel:40044600" className="flex items-center gap-2 text-white/80 hover:text-white">
                   <PhoneIcon />
                   400 44 600
+                </a>
+                <a href="mailto:post@areknuteekspertene.no" className="flex items-center gap-2 text-white/80 hover:text-white">
+                  <EmailIcon />
+                  post@areknuteekspertene.no
                 </a>
               </div>
             </div>
