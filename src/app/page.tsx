@@ -66,6 +66,27 @@ const EmailIcon = () => (
   </svg>
 );
 
+// Service Icons - Unike ikoner for hver behandling
+const LaserIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[var(--color-forest)]">
+    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+  </svg>
+);
+
+const InjectionIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[var(--color-forest)]">
+    <path d="M18.5 2.5L21.5 5.5M15 6l3 3M8.5 12.5l-5 5c-.83.83-.83 2.17 0 3s2.17.83 3 0l5-5M12 8l4 4M9 11l-1.5 1.5M13.5 6.5L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ScalpelIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[var(--color-forest)]">
+    <path d="M4 20L20 4M4 20l3-3M7 17l3-3M10 14l2-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M14 10c2-2 4-2 6-4s0-4-2-2-2 4-4 6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 // FAQ Data - Utvidet for SEO
 const faqData = [
   {
@@ -110,24 +131,24 @@ const faqData = [
   },
 ];
 
-// Testimonials Data
+// Testimonials Data - Generelle pasientopplevelser (ikke spesifikke resultatpåstander)
 const testimonials = [
   {
-    text: "Etter 15 år med smerter og hevelser i bena, tok jeg endelig steget. Behandlingen var nesten smertefri, og allerede etter en uke merket jeg enorm forskjell. Skulle ønske jeg gjorde det før!",
-    author: "Kristin M.",
-    location: "Oslo",
+    text: "Jeg satte stor pris på den grundige forundersøkelsen og at alt ble forklart tydelig. Personalet var profesjonelle og jeg følte meg godt ivaretatt gjennom hele prosessen.",
+    author: "Pasient",
+    location: "Oslo-klinikken",
     rating: 5
   },
   {
-    text: "Profesjonelt fra første kontakt. Dr. Hansen forklarte alt grundig og jeg følte meg trygg hele veien. Resultatet er fantastisk - bena ser helt normale ut igjen.",
-    author: "Erik S.",
-    location: "Tromsø",
+    text: "God oppfølging og enkel timebestilling. Legen tok seg tid til å svare på alle spørsmålene mine og forklarte hva jeg kunne forvente. Veldig fornøyd med servicen.",
+    author: "Pasient",
+    location: "Tromsø-klinikken",
     rating: 5
   },
   {
-    text: "Som sykepleier står jeg mye, og åreknutene hadde blitt et stort problem. Fleksibel timebestilling og rask behandling gjorde det enkelt å kombinere med jobb.",
-    author: "Linda H.",
-    location: "Oslo",
+    text: "Fleksible timer som passet med jobben min. Profesjonelt og hyggelig personale. Fikk god informasjon om ettervern og oppfølging.",
+    author: "Pasient",
+    location: "Oslo-klinikken",
     rating: 5
   }
 ];
@@ -215,15 +236,18 @@ export default function Home() {
             </button>
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
             <a href="tel:40044600" className="text-sm text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
               400 44 600
             </a>
             <a
               href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
-              className="px-4 py-2 bg-[var(--color-forest)] text-white text-sm font-medium rounded hover:bg-[var(--color-forest-light)] transition-colors"
+              className="group flex items-center gap-2 px-5 py-2.5 border border-[var(--color-forest)] text-[var(--color-forest)] text-sm font-medium rounded-full hover:bg-[var(--color-forest)] hover:text-white transition-all duration-200"
             >
-              Bestill time
+              <span>Bestill time</span>
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-0.5">
+                <path d="M4.167 10h11.666M10 4.167L15.833 10 10 15.833" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </a>
           </div>
 
@@ -320,10 +344,10 @@ export default function Home() {
         <div className="container-wide">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
             {[
-              { number: "9.000+", label: "Behandlinger utført" },
-              { number: "15+", label: "År med erfaring" },
-              { number: "98%", label: "Fornøyde pasienter" },
-              { number: "2", label: "Klinikker i Norge" }
+              { number: "2009", label: "Etablert" },
+              { number: "15+", label: "Års erfaring" },
+              { number: "2", label: "Klinikker" },
+              { number: "Spesialist", label: "Karkirurg" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="stat-number mb-1 md:mb-2">{stat.number}</div>
@@ -349,24 +373,25 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="card group">
-                <div className="w-10 md:w-12 h-10 md:h-12 bg-[var(--color-sage-light)] rounded-lg flex items-center justify-center mb-4 md:mb-6 group-hover:bg-[var(--color-sage)] transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[var(--color-forest)] md:w-6 md:h-6">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+            {services.map((service, index) => {
+              const icons = [<LaserIcon key="laser" />, <InjectionIcon key="injection" />, <ScalpelIcon key="scalpel" />];
+              return (
+                <div key={index} className="card group">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-[var(--color-sage-light)] rounded-lg flex items-center justify-center mb-4 md:mb-6 group-hover:bg-[var(--color-sage)] transition-colors">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-lg md:text-xl lg:text-2xl mb-2 md:mb-3">{service.title}</h3>
+                  <p className="text-[var(--color-charcoal-light)] text-sm md:text-base mb-4 md:mb-6">{service.description}</p>
+                  <div className="flex flex-wrap gap-3 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)] pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
+                    <span className="flex items-center gap-1.5 md:gap-2">
+                      <ClockIcon />
+                      {service.duration}
+                    </span>
+                    <span>Restitusjon: {service.recovery}</span>
+                  </div>
                 </div>
-                <h3 className="text-lg md:text-xl lg:text-2xl mb-2 md:mb-3">{service.title}</h3>
-                <p className="text-[var(--color-charcoal-light)] text-sm md:text-base mb-4 md:mb-6">{service.description}</p>
-                <div className="flex flex-wrap gap-3 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)] pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
-                  <span className="flex items-center gap-1.5 md:gap-2">
-                    <ClockIcon />
-                    {service.duration}
-                  </span>
-                  <span>Restitusjon: {service.recovery}</span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -600,6 +625,17 @@ export default function Home() {
               <PhoneIcon />
               400 44 600
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Medical Disclaimer */}
+      <section className="py-6 md:py-8 bg-[var(--color-cream-dark)] border-t border-[var(--color-sage-light)]">
+        <div className="container-wide">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xs md:text-sm text-[var(--color-charcoal-light)] leading-relaxed">
+              <strong className="text-[var(--color-charcoal)]">Medisinsk informasjon:</strong> Innholdet på denne nettsiden er kun ment som generell informasjon og erstatter ikke profesjonell medisinsk rådgivning, diagnose eller behandling. Resultater kan variere fra person til person. Konsulter alltid kvalifisert helsepersonell for vurdering av din individuelle situasjon. Alle behandlinger utføres av autorisert helsepersonell.
+            </p>
           </div>
         </div>
       </section>
