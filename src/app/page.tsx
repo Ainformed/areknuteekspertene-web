@@ -310,8 +310,7 @@ export default function Home() {
             </h1>
 
             <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-xl mb-6 md:mb-8 leading-relaxed">
-              Med over 9.000 vellykkede behandlinger gir vi deg trygg og moderne åreknutebehandling.
-              Start med en forundersøkelse for å få din personlige behandlingsplan.
+              Spesialistklinikk for åreknuter siden 2009. Moderne laserbehandling og skumbehandling utført av erfarne karkirurger.
             </p>
 
             <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">

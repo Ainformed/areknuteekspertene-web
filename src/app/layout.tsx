@@ -19,11 +19,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://areknuteekspertene-web.vercel.app"),
   title: {
-    default: "Åreknutebehandling Oslo & Tromsø | 9000+ behandlinger | Åreknuteekspertene",
+    default: "Åreknuteekspertene | Spesialistklinikk for åreknuter i Oslo og Tromsø",
     template: "%s | Åreknuteekspertene",
   },
   description:
-    "Norges ledende spesialistklinikk for åreknuter. Skånsom laserbehandling og skumbehandling med over 9.000 vellykkede behandlinger siden 2009. Dr. Thomas Hayes - karkirurgen med lengst erfaring i Norge. Klinikker på Majorstuen i Oslo og i Tromsø. Book forundersøkelse fra kr 1.200,-",
+    "Åreknuteekspertene er en spesialistklinikk for behandling av åreknuter, etablert i 2009. Vi tilbyr laserbehandling (EVLA) og skumbehandling. Klinikker i Oslo (Majorstuen) og Tromsø. Forundersøkelse 1 200 kr.",
   keywords: [
     "åreknuter",
     "åreknutebehandling",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Åreknutebehandling Oslo & Tromsø | Åreknuteekspertene",
+    title: "Åreknuteekspertene | Spesialistklinikk for åreknuter",
     description:
-      "Norges ledende spesialistklinikk for åreknuter. Over 9.000 vellykkede behandlinger siden 2009. Book forundersøkelse i dag!",
+      "Spesialistklinikk for åreknuter i Oslo og Tromsø. Laserbehandling og skumbehandling. Etablert 2009.",
     url: "https://areknuteekspertene-web.vercel.app",
     siteName: "Åreknuteekspertene",
     locale: "nb_NO",
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Åreknutebehandling Oslo & Tromsø | Åreknuteekspertene",
+    title: "Åreknuteekspertene | Spesialistklinikk for åreknuter",
     description:
-      "Norges ledende spesialistklinikk for åreknuter. Over 9.000 vellykkede behandlinger.",
+      "Spesialistklinikk for åreknuter i Oslo og Tromsø. Laserbehandling og skumbehandling.",
   },
   robots: {
     index: true,
@@ -103,7 +103,7 @@ const jsonLd = {
       logo: "https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png",
       image: "https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png",
       description:
-        "Norges første helspesialiserte åreknuteklinikk siden 2009. Over 9.000 vellykkede behandlinger med moderne laserbehandling og skumbehandling.",
+        "Spesialistklinikk for behandling av åreknuter, etablert i 2009. Tilbyr laserbehandling (EVLA), skumbehandling og mikroflebektomi. Klinikker i Oslo og Tromsø.",
       telephone: "+47 400 44 600",
       email: "post@areknuteekspertene.no",
       foundingDate: "2009",
@@ -144,13 +144,6 @@ const jsonLd = {
       sameAs: [
         "https://areknuteekspertene.no",
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "500",
-        bestRating: "5",
-        worstRating: "1",
-      },
     },
     {
       "@type": "LocalBusiness",
