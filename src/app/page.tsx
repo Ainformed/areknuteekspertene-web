@@ -153,21 +153,21 @@ const testimonials = [
   }
 ];
 
-// Price Data (Fra areknuteekspertene.no - gjeldende fra 01.01.2025)
+// Price Data (Fra areknuteekspertene.no - gjeldende priser)
 const priceData = {
   konsultasjon: [
-    { name: "Forundersøkelse med ultralyd", price: "1 200", note: "Trekkes fra ved behandling" },
+    { name: "Forundersøkelse med ultralyd", price: "1 200", note: "Trekkes fra ved behandling", highlight: true },
     { name: "Kontroll etter behandling", price: "0", note: "Inkludert i 12 måneder" },
   ],
   behandlinger: [
-    { name: "Laserbehandling (EVLA) - ett ben", price: "10 000 - 24 000", note: "Avhengig av omfang" },
-    { name: "Laserbehandling (EVLA) - begge ben", price: "16 000 - 38 500", note: "Samme dag" },
-    { name: "Åreknutebehandling - ett ben", price: "5 000 - 24 500", note: "Kombinasjonsbehandling" },
-    { name: "Åreknutebehandling - begge ben", price: "10 000 - 39 000", note: "Kombinasjonsbehandling" },
-    { name: "Skumbehandling", price: "1 500 - 6 000", note: "Per behandling" },
+    { name: "Laserbehandling (EVLA) - ett ben", price: "fra 10 000", note: "Avhengig av omfang" },
+    { name: "Laserbehandling (EVLA) - begge ben", price: "fra 16 000", note: "Behandle begge samme dag" },
+    { name: "Åreknutebehandling - ett ben", price: "fra 5 000", note: "Kombinasjonsbehandling" },
+    { name: "Åreknutebehandling - begge ben", price: "fra 10 000", note: "Kombinasjonsbehandling" },
+    { name: "Skumbehandling", price: "fra 1 500", note: "Per behandling" },
   ],
   tillegg: [
-    { name: "Kompresjonsstrømper (per par)", price: "450", note: "Anbefalt etter behandling" },
+    { name: "Kompresjonsstrømper", price: "450", note: "Per par" },
   ],
 };
 
@@ -328,7 +328,7 @@ export default function Home() {
             <div className="animate-fade-in-up animation-delay-400 flex flex-col sm:flex-row gap-3 sm:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
               <span className="flex items-center gap-2">
                 <CheckIcon />
-                Kr 1.200,- (trekkes fra ved behandling)
+                Forundersøkelse 1 200 kr — trekkes fra behandling
               </span>
               <span className="flex items-center gap-2">
                 <ClockIcon />
@@ -422,7 +422,7 @@ export default function Home() {
                 </p>
                 <div className="bg-white/10 rounded-lg p-4 md:p-6 mb-6 md:mb-8">
                   <div className="text-white/60 text-xs md:text-sm mb-1">Forundersøkelse</div>
-                  <div className="text-2xl md:text-3xl font-serif text-white mb-1">Kr 1.200,-</div>
+                  <div className="text-2xl md:text-3xl font-serif text-white mb-1">1 200 kr</div>
                   <div className="text-white/60 text-xs md:text-sm">Trekkes fra ved behandling</div>
                 </div>
                 <a
@@ -537,7 +537,8 @@ export default function Home() {
                 postal: "0369 Oslo",
                 phone: "400 44 600",
                 email: "post@areknuteekspertene.no",
-                hours: "Man-Fre: 08:00-16:00"
+                hours: "Man-Fre: 08:00-16:00",
+                mapUrl: "https://maps.google.com/?q=Sørkedalsveien+10A,+0369+Oslo"
               },
               {
                 city: "Tromsø",
@@ -545,20 +546,21 @@ export default function Home() {
                 postal: "9008 Tromsø",
                 phone: "400 44 600",
                 email: "post@areknuteekspertene.no",
-                hours: "Man-Fre: 08:00-16:00"
+                hours: "Man-Fre: 08:00-16:00",
+                mapUrl: "https://maps.google.com/?q=Storgata+94,+9008+Tromsø"
               }
             ].map((location, index) => (
               <div key={index} className="card">
-                <div className="flex items-start justify-between mb-4 md:mb-6">
+                <a href={location.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-start justify-between mb-4 md:mb-6 group">
                   <div>
-                    <h3 className="text-xl md:text-2xl lg:text-3xl mb-1">{location.city}</h3>
-                    <p className="text-[var(--color-charcoal-light)] text-sm md:text-base">{location.address}</p>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl mb-1 group-hover:text-[var(--color-forest)] transition-colors">{location.city}</h3>
+                    <p className="text-[var(--color-charcoal-light)] text-sm md:text-base group-hover:text-[var(--color-forest)] transition-colors">{location.address}</p>
                     <p className="text-[var(--color-charcoal-light)] text-sm md:text-base">{location.postal}</p>
                   </div>
-                  <div className="w-10 md:w-12 h-10 md:h-12 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)]">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)] group-hover:bg-[var(--color-forest)] group-hover:text-white transition-colors">
                     <MapPinIcon />
                   </div>
-                </div>
+                </a>
                 <div className="space-y-2 md:space-y-3 pt-4 md:pt-6 border-t border-[var(--color-sage-light)]">
                   <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 md:gap-3 text-[var(--color-charcoal-light)] text-sm md:text-base hover:text-[var(--color-forest)] transition-colors">
                     <PhoneIcon />
@@ -694,7 +696,7 @@ export default function Home() {
             <div className="bg-[var(--color-forest)] px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
               <div>
                 <h2 className="text-xl md:text-2xl font-serif text-white">Prisliste</h2>
-                <p className="text-white/70 text-xs md:text-sm">Åreknuteekspertene 2025</p>
+                <p className="text-white/70 text-xs md:text-sm">Veiledende priser</p>
               </div>
               <button
                 onClick={() => setPriceModalOpen(false)}
@@ -715,7 +717,7 @@ export default function Home() {
                 </h3>
                 <div className="space-y-2 md:space-y-3">
                   {priceData.konsultasjon.map((item, index) => (
-                    <div key={index} className="flex justify-between items-start py-2 md:py-3 border-b border-gray-100 last:border-0">
+                    <div key={index} className={`flex justify-between items-start py-2 md:py-3 border-b border-gray-100 last:border-0 ${item.highlight ? 'bg-[var(--color-sage-light)]/30 -mx-2 px-2 rounded-lg' : ''}`}>
                       <div className="flex-1 min-w-0 pr-2">
                         <span className="text-[var(--color-charcoal)] text-sm md:text-base">{item.name}</span>
                         {item.note && (
@@ -723,7 +725,7 @@ export default function Home() {
                         )}
                       </div>
                       <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap text-sm md:text-base">
-                        {item.price === "0" ? "Gratis" : `kr ${item.price},-`}
+                        {item.price === "0" ? "Inkludert" : `${item.price} kr`}
                       </span>
                     </div>
                   ))}
@@ -746,7 +748,7 @@ export default function Home() {
                         )}
                       </div>
                       <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap text-sm md:text-base">
-                        kr {item.price},-
+                        {item.price} kr
                       </span>
                     </div>
                   ))}
@@ -769,7 +771,7 @@ export default function Home() {
                         )}
                       </div>
                       <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap text-sm md:text-base">
-                        kr {item.price},-
+                        {item.price} kr
                       </span>
                     </div>
                   ))}
