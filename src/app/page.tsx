@@ -466,8 +466,8 @@ export default function Home() {
             {[
               {
                 city: "Oslo",
-                address: "Bogstadveien 53",
-                postal: "0366 Oslo",
+                address: "Sørkedalsveien 10A",
+                postal: "0369 Oslo",
                 phone: "400 44 600",
                 hours: "Man-Fre: 08:00-16:00"
               },
@@ -574,7 +574,7 @@ export default function Home() {
               <ul className="space-y-3">
                 <li>
                   <a href="#kontakt">Oslo</a>
-                  <span className="block text-white/50 text-sm">Bogstadveien 53</span>
+                  <span className="block text-white/50 text-sm">Sørkedalsveien 10A</span>
                 </li>
                 <li>
                   <a href="#kontakt">Tromsø</a>
