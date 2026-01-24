@@ -66,27 +66,47 @@ const EmailIcon = () => (
   </svg>
 );
 
-// FAQ Data
+// FAQ Data - Utvidet for SEO
 const faqData = [
   {
     question: "Hva er åreknuter og hvorfor oppstår de?",
-    answer: "Åreknuter er utvidede, synlige blodårer som oftest oppstår i bena. De skyldes svekket funksjon i veneklaffene som normalt hindrer blodet i å strømme tilbake. Arvelige faktorer, graviditet, overvekt og stående arbeid øker risikoen."
+    answer: "Åreknuter er utvidede, synlige blodårer som oftest oppstår i bena. De skyldes svekket funksjon i veneklaffene som normalt hindrer blodet i å strømme tilbake. Når klaffene ikke fungerer, samler blodet seg opp og venene utvides. Arvelige faktorer, graviditet, overvekt, alder og stående arbeid øker risikoen for å utvikle åreknuter."
+  },
+  {
+    question: "Hvilke symptomer gir åreknuter?",
+    answer: "Vanlige symptomer på åreknuter inkluderer: synlige, slyngede blodårer under huden, tyngdefølelse i bena, hevelse rundt anklene, kløe og irritasjon rundt åreknutene, kramper om natten, ømhet og verking, samt misfarging av huden. Symptomene forverres ofte utover dagen og ved varme."
   },
   {
     question: "Gjør behandlingen vondt?",
-    answer: "Moderne behandlingsmetoder er skånsomme og utføres med lokalbedøvelse. De fleste pasienter opplever kun et lite stikk ved bedøvelsen. Etter behandlingen kan du oppleve lett ømhet som varer noen dager."
+    answer: "Moderne behandlingsmetoder er skånsomme og utføres med lokalbedøvelse. De fleste pasienter opplever kun et lite stikk ved bedøvelsen. Selve behandlingen er tilnærmet smertefri. Etter behandlingen kan du oppleve lett ømhet og stramhet som varer noen dager."
+  },
+  {
+    question: "Hva er forskjellen på laserbehandling og skumbehandling?",
+    answer: "Laserbehandling (EVLA) er gullstandarden for behandling av større åreknuter. Et laserfiber føres inn i venen og lukker den med varme. Skumbehandling brukes for mindre og mellomstore åreknuter - et skum injiseres som irriterer veneveggen slik at den lukkes. Ofte kombineres metodene for best resultat."
   },
   {
     question: "Hvor lang er restitusjonstiden?",
-    answer: "Du kan gå hjem samme dag og de fleste kan gjenoppta normale aktiviteter umiddelbart. Vi anbefaler å unngå hard trening i 1-2 uker. Full effekt av behandlingen sees etter 4-6 uker."
+    answer: "Du kan gå hjem samme dag og de fleste kan gjenoppta normale aktiviteter umiddelbart. Det er vanligvis ikke behov for sykemelding. Vi anbefaler å unngå hard trening og tunge løft i 1-2 uker. Du bør bruke kompresjonsstrømper i 1-2 uker etter behandling. Full effekt av behandlingen sees etter 4-6 uker."
   },
   {
     question: "Dekkes behandlingen av forsikring?",
-    answer: "Ja, de fleste helseforsikringer dekker åreknutebehandling når det er medisinsk indisert. Vi hjelper deg med dokumentasjonen. Kontakt ditt forsikringsselskap for å bekrefte dekningen."
+    answer: "Ja, de fleste helseforsikringer dekker åreknutebehandling når det er medisinsk indisert. Vi behandler pasienter fra bl.a. Tryg, If, Storebrand, Sparebank 1, Hjelp 24 og Vertikal. Vi hjelper deg med nødvendig dokumentasjon til forsikringsselskapet."
   },
   {
     question: "Hva koster en forundersøkelse?",
-    answer: "Forundersøkelsen koster kr 1.200,-. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse og en personlig behandlingsplan."
+    answer: "Forundersøkelsen koster kr 1.200,-. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse av erfaren karkirurg og en personlig behandlingsplan."
+  },
+  {
+    question: "Kan åreknuter komme tilbake etter behandling?",
+    answer: "Moderne laserbehandling har svært lav tilbakefallsrate - rundt 5%, som er vesentlig lavere enn ved tradisjonell stripping. Det er viktig med grundig behandling første gang. Oppfølging etter 12 måneder er inkludert i prisen for å sikre best mulig resultat."
+  },
+  {
+    question: "Må jeg ha henvisning fra fastlege?",
+    answer: "Nei, du trenger ikke henvisning for å bestille time hos oss. Du kan booke forundersøkelse direkte. Ved forundersøkelsen vurderer vår karkirurg om behandling er nødvendig og hvilken metode som passer best for deg."
+  },
+  {
+    question: "Hva er forskjellen på åreknuter og sprengte blodkar?",
+    answer: "Åreknuter er utvidede vener som ofte er synlige som slyngede, blålige årer under huden. Sprengte blodkar (telangiektasier) er små, tynne røde eller blå årer nær hudoverflaten. Begge tilstander kan behandles hos oss - sprengte blodkar behandles vanligvis med sklerosering."
   },
 ];
 
@@ -112,22 +132,21 @@ const testimonials = [
   }
 ];
 
-// Price Data
+// Price Data (Fra areknuteekspertene.no - gjeldende fra 01.01.2025)
 const priceData = {
   konsultasjon: [
     { name: "Forundersøkelse med ultralyd", price: "1 200", note: "Trekkes fra ved behandling" },
-    { name: "Kontroll etter behandling", price: "0", note: "Inkludert" },
+    { name: "Kontroll etter behandling", price: "0", note: "Inkludert i 12 måneder" },
   ],
   behandlinger: [
-    { name: "Laserbehandling (EVLA) - ett ben", price: "12 000", note: "Gullstandard" },
-    { name: "Laserbehandling (EVLA) - begge ben", price: "20 000", note: "Samme dag" },
-    { name: "Skumbehandling - per behandling", price: "4 500", note: "" },
-    { name: "Mikroflebektomi - per ben", price: "8 000", note: "" },
-    { name: "Kombinasjonsbehandling", price: "Fra 15 000", note: "Tilpasset ditt behov" },
+    { name: "Laserbehandling (EVLA) - ett ben", price: "10 000 - 24 000", note: "Avhengig av omfang" },
+    { name: "Laserbehandling (EVLA) - begge ben", price: "16 000 - 38 500", note: "Samme dag" },
+    { name: "Åreknutebehandling - ett ben", price: "5 000 - 24 500", note: "Kombinasjonsbehandling" },
+    { name: "Åreknutebehandling - begge ben", price: "10 000 - 39 000", note: "Kombinasjonsbehandling" },
+    { name: "Skumbehandling", price: "1 500 - 6 000", note: "Per behandling" },
   ],
   tillegg: [
     { name: "Kompresjonsstrømper (per par)", price: "450", note: "Anbefalt etter behandling" },
-    { name: "Ekstra skumbehandling", price: "2 500", note: "Ved behov" },
   ],
 };
 
@@ -174,36 +193,36 @@ export default function Home() {
 
       {/* Header */}
       <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
-        <div className="container-wide py-4 flex justify-between items-center">
-          <a href="#" className="flex items-center gap-2">
+        <div className="container-wide py-3 flex justify-between items-center">
+          <a href="#" className="flex items-center">
             <img
               src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
               alt="Åreknuteekspertene"
-              className="h-10 md:h-12 w-auto"
+              className="h-12 md:h-16 w-auto"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             <a href="#behandlinger" className="nav-link">Behandlinger</a>
-            <a href="#prosess" className="nav-link">Slik fungerer det</a>
             <a href="#om-oss" className="nav-link">Om oss</a>
             <a href="#faq" className="nav-link">FAQ</a>
-            <a href="#kontakt" className="nav-link">Kontakt</a>
-          </nav>
-
-          <div className="hidden md:flex items-center gap-4">
             <button
               onClick={() => setPriceModalOpen(true)}
               className="nav-link cursor-pointer"
             >
-              Se priser
+              Priser
             </button>
-            <a href="tel:40044600" className="flex items-center gap-2 text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
-              <PhoneIcon />
-              <span className="font-medium">400 44 600</span>
+          </nav>
+
+          <div className="hidden md:flex items-center gap-3">
+            <a href="tel:40044600" className="text-sm text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
+              400 44 600
             </a>
-            <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary">
+            <a
+              href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+              className="px-4 py-2 bg-[var(--color-forest)] text-white text-sm font-medium rounded hover:bg-[var(--color-forest-light)] transition-colors"
+            >
               Bestill time
             </a>
           </div>
@@ -221,24 +240,24 @@ export default function Home() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-[var(--color-sage-light)] animate-fade-in">
-            <nav className="container-wide py-6 flex flex-col gap-4">
-              <a href="#behandlinger" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>Behandlinger</a>
-              <a href="#prosess" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>Slik fungerer det</a>
-              <a href="#om-oss" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>Om oss</a>
-              <a href="#faq" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
-              <a href="#kontakt" className="py-2 text-lg" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
+            <nav className="container-wide py-4 flex flex-col gap-2">
+              <a href="#behandlinger" className="py-2" onClick={() => setMobileMenuOpen(false)}>Behandlinger</a>
+              <a href="#om-oss" className="py-2" onClick={() => setMobileMenuOpen(false)}>Om oss</a>
+              <a href="#faq" className="py-2" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
               <button
                 onClick={() => { setMobileMenuOpen(false); setPriceModalOpen(true); }}
-                className="py-2 text-lg text-left text-[var(--color-forest)] font-medium"
+                className="py-2 text-left text-[var(--color-forest)] font-medium"
               >
-                Se priser
+                Priser
               </button>
-              <div className="pt-4 border-t border-[var(--color-sage-light)]">
-                <a href="tel:40044600" className="flex items-center gap-2 py-2">
-                  <PhoneIcon />
-                  <span>400 44 600</span>
+              <div className="pt-3 mt-2 border-t border-[var(--color-sage-light)] flex items-center justify-between">
+                <a href="tel:40044600" className="text-sm text-[var(--color-charcoal-light)]">
+                  400 44 600
                 </a>
-                <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary w-full mt-4">
+                <a
+                  href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                  className="px-4 py-2 bg-[var(--color-forest)] text-white text-sm font-medium rounded"
+                >
                   Bestill time
                 </a>
               </div>
@@ -248,30 +267,30 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-hero min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
+      <section className="bg-gradient-hero min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-20 pb-12 md:pb-16 relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="organic-shape w-[600px] h-[600px] -top-40 -right-40 opacity-60" />
-        <div className="organic-shape w-[400px] h-[400px] bottom-20 -left-20 opacity-40" style={{ animationDelay: "2s" }} />
+        <div className="organic-shape w-[300px] md:w-[600px] h-[300px] md:h-[600px] -top-20 md:-top-40 -right-20 md:-right-40 opacity-40 md:opacity-60" />
+        <div className="organic-shape w-[200px] md:w-[400px] h-[200px] md:h-[400px] bottom-10 md:bottom-20 -left-10 md:-left-20 opacity-30 md:opacity-40" style={{ animationDelay: "2s" }} />
 
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <div className="animate-fade-in-up">
-              <span className="inline-block px-4 py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-sm font-medium rounded-full mb-6">
+              <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-xs md:text-sm font-medium rounded-full mb-4 md:mb-6">
                 Norges ledende spesialistklinikk
               </span>
             </div>
 
-            <h1 className="animate-fade-in-up animation-delay-100 text-4xl md:text-5xl lg:text-6xl font-medium text-[var(--color-charcoal)] mb-6 text-balance">
+            <h1 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[var(--color-charcoal)] mb-4 md:mb-6 text-balance">
               Bli kvitt åreknuter
               <span className="block text-[var(--color-forest)]">skånsomt og effektivt</span>
             </h1>
 
-            <p className="animate-fade-in-up animation-delay-200 text-lg md:text-xl text-[var(--color-charcoal-light)] max-w-xl mb-8 leading-relaxed">
+            <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-xl mb-6 md:mb-8 leading-relaxed">
               Med over 9.000 vellykkede behandlinger gir vi deg trygg og moderne åreknutebehandling.
               Start med en forundersøkelse for å få din personlige behandlingsplan.
             </p>
 
-            <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
               <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary">
                 Bestill forundersøkelse
                 <ArrowRightIcon />
@@ -282,7 +301,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="animate-fade-in-up animation-delay-400 flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-[var(--color-charcoal-light)]">
+            <div className="animate-fade-in-up animation-delay-400 flex flex-col sm:flex-row gap-3 sm:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
               <span className="flex items-center gap-2">
                 <CheckIcon />
                 Kr 1.200,- (trekkes fra ved behandling)
@@ -297,9 +316,9 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-16 bg-white border-y border-[var(--color-sage-light)]">
+      <section className="py-10 md:py-16 bg-white border-y border-[var(--color-sage-light)]">
         <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
             {[
               { number: "9.000+", label: "Behandlinger utført" },
               { number: "15+", label: "År med erfaring" },
@@ -307,8 +326,8 @@ export default function Home() {
               { number: "2", label: "Klinikker i Norge" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="stat-number mb-2">{stat.number}</div>
-                <div className="text-[var(--color-charcoal-light)] text-sm">{stat.label}</div>
+                <div className="stat-number mb-1 md:mb-2">{stat.number}</div>
+                <div className="text-[var(--color-charcoal-light)] text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -318,29 +337,29 @@ export default function Home() {
       {/* Services Section */}
       <section id="behandlinger" className="py-[var(--section-padding)] bg-gradient-section">
         <div className="container-wide">
-          <div className="text-center mb-16">
-            <span className="text-[var(--color-forest)] text-sm font-medium tracking-wide uppercase">Våre behandlinger</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mt-4 mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Våre behandlinger</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
               Moderne og skånsomme metoder
             </h2>
-            <p className="text-[var(--color-charcoal-light)] text-lg max-w-2xl mx-auto">
+            <p className="text-[var(--color-charcoal-light)] text-sm md:text-lg max-w-2xl mx-auto">
               Vi tilbyr de mest effektive og skånsomme behandlingsmetodene for åreknuter,
               tilpasset din situasjon.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div key={index} className="card group">
-                <div className="w-12 h-12 bg-[var(--color-sage-light)] rounded-lg flex items-center justify-center mb-6 group-hover:bg-[var(--color-sage)] transition-colors">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[var(--color-forest)]">
+                <div className="w-10 md:w-12 h-10 md:h-12 bg-[var(--color-sage-light)] rounded-lg flex items-center justify-center mb-4 md:mb-6 group-hover:bg-[var(--color-sage)] transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[var(--color-forest)] md:w-6 md:h-6">
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="text-xl md:text-2xl mb-3">{service.title}</h3>
-                <p className="text-[var(--color-charcoal-light)] mb-6">{service.description}</p>
-                <div className="flex gap-6 text-sm text-[var(--color-charcoal-light)] pt-4 border-t border-[var(--color-sage-light)]">
-                  <span className="flex items-center gap-2">
+                <h3 className="text-lg md:text-xl lg:text-2xl mb-2 md:mb-3">{service.title}</h3>
+                <p className="text-[var(--color-charcoal-light)] text-sm md:text-base mb-4 md:mb-6">{service.description}</p>
+                <div className="flex flex-wrap gap-3 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)] pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
+                  <span className="flex items-center gap-1.5 md:gap-2">
                     <ClockIcon />
                     {service.duration}
                   </span>
@@ -355,13 +374,13 @@ export default function Home() {
       {/* Process Section */}
       <section id="prosess" className="py-[var(--section-padding)] bg-[var(--color-cream)]">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <span className="text-[var(--color-forest)] text-sm font-medium tracking-wide uppercase">Slik fungerer det</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl mt-4 mb-6">
+              <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Slik fungerer det</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
                 Din vei til friske ben
               </h2>
-              <p className="text-[var(--color-charcoal-light)] text-lg mb-8">
+              <p className="text-[var(--color-charcoal-light)] text-sm md:text-lg mb-6 md:mb-8">
                 Vi gjør prosessen enkel og trygg for deg. Fra første konsultasjon til
                 ferdig behandling følger vi deg hele veien.
               </p>
@@ -374,11 +393,11 @@ export default function Home() {
                   { step: 2, title: "Behandling", desc: "Skånsom behandling utført av våre erfarne spesialister. De fleste kan gå hjem samme dag." },
                   { step: 3, title: "Oppfølging", desc: "Kontroll etter 4-6 uker for å sikre optimalt resultat. Vi er tilgjengelige hvis du har spørsmål." }
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-6 mb-8 last:mb-0">
+                  <div key={index} className="flex gap-4 md:gap-6 mb-6 md:mb-8 last:mb-0">
                     <div className="process-dot">{item.step}</div>
-                    <div className="pt-2">
-                      <h3 className="text-xl mb-2">{item.title}</h3>
-                      <p className="text-[var(--color-charcoal-light)]">{item.desc}</p>
+                    <div className="pt-1 md:pt-2">
+                      <h3 className="text-lg md:text-xl mb-1 md:mb-2">{item.title}</h3>
+                      <p className="text-[var(--color-charcoal-light)] text-sm md:text-base">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -386,22 +405,22 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="card card-forest p-8 md:p-12">
-                <h3 className="text-2xl md:text-3xl text-white mb-4">
+              <div className="card card-forest p-6 md:p-8 lg:p-12">
+                <h3 className="text-xl md:text-2xl lg:text-3xl text-white mb-3 md:mb-4">
                   Klar for å ta første steg?
                 </h3>
-                <p className="text-white/80 mb-8">
+                <p className="text-white/80 text-sm md:text-base mb-6 md:mb-8">
                   Book en forundersøkelse i dag. Vi kontakter deg innen 24 timer for å
                   finne en tid som passer.
                 </p>
-                <div className="bg-white/10 rounded-lg p-6 mb-8">
-                  <div className="text-white/60 text-sm mb-1">Forundersøkelse</div>
-                  <div className="text-3xl font-serif text-white mb-1">Kr 1.200,-</div>
-                  <div className="text-white/60 text-sm">Trekkes fra ved behandling</div>
+                <div className="bg-white/10 rounded-lg p-4 md:p-6 mb-6 md:mb-8">
+                  <div className="text-white/60 text-xs md:text-sm mb-1">Forundersøkelse</div>
+                  <div className="text-2xl md:text-3xl font-serif text-white mb-1">Kr 1.200,-</div>
+                  <div className="text-white/60 text-xs md:text-sm">Trekkes fra ved behandling</div>
                 </div>
                 <a
                   href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
-                  className="block w-full bg-white text-[var(--color-forest)] font-medium py-4 px-6 rounded text-center hover:bg-[var(--color-cream)] transition-colors"
+                  className="block w-full bg-white text-[var(--color-forest)] font-medium py-3 md:py-4 px-4 md:px-6 rounded text-center text-sm md:text-base hover:bg-[var(--color-cream)] transition-colors"
                 >
                   Bestill forundersøkelse
                 </a>
@@ -414,31 +433,31 @@ export default function Home() {
       {/* Testimonials Section */}
       <section id="om-oss" className="py-[var(--section-padding)] bg-gradient-section">
         <div className="container-wide">
-          <div className="text-center mb-16">
-            <span className="text-[var(--color-forest)] text-sm font-medium tracking-wide uppercase">Hva pasientene sier</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mt-4 mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Hva pasientene sier</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
               Ekte historier, ekte resultater
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial-card">
-                <div className="flex gap-1 text-[var(--color-gold)] mb-4 pt-8">
+                <div className="flex gap-1 text-[var(--color-gold)] mb-3 md:mb-4 pt-6 md:pt-8">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <p className="text-[var(--color-charcoal)] mb-6 leading-relaxed">
+                <p className="text-[var(--color-charcoal)] text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
                   {testimonial.text}
                 </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-[var(--color-sage-light)]">
-                  <div className="w-10 h-10 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)] font-medium">
+                <div className="flex items-center gap-3 pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
+                  <div className="w-8 md:w-10 h-8 md:h-10 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)] font-medium text-sm md:text-base">
                     {testimonial.author[0]}
                   </div>
                   <div>
-                    <div className="font-medium text-[var(--color-charcoal)]">{testimonial.author}</div>
-                    <div className="text-sm text-[var(--color-charcoal-light)]">{testimonial.location}</div>
+                    <div className="font-medium text-[var(--color-charcoal)] text-sm md:text-base">{testimonial.author}</div>
+                    <div className="text-xs md:text-sm text-[var(--color-charcoal-light)]">{testimonial.location}</div>
                   </div>
                 </div>
               </div>
@@ -450,9 +469,9 @@ export default function Home() {
       {/* FAQ Section */}
       <section id="faq" className="py-[var(--section-padding)] bg-[var(--color-cream)]">
         <div className="container-narrow">
-          <div className="text-center mb-16">
-            <span className="text-[var(--color-forest)] text-sm font-medium tracking-wide uppercase">Ofte stilte spørsmål</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mt-4">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Ofte stilte spørsmål</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4">
               Har du spørsmål?
             </h2>
           </div>
@@ -481,11 +500,11 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-[var(--color-charcoal-light)] mb-4">
+          <div className="text-center mt-8 md:mt-12">
+            <p className="text-[var(--color-charcoal-light)] text-sm md:text-base mb-3 md:mb-4">
               Finner du ikke svar på det du lurer på?
             </p>
-            <a href="tel:40044600" className="btn-secondary">
+            <a href="tel:40044600" className="btn-secondary text-sm md:text-base">
               <PhoneIcon />
               Ring oss på 400 44 600
             </a>
@@ -496,14 +515,14 @@ export default function Home() {
       {/* Locations Section */}
       <section id="kontakt" className="py-[var(--section-padding)] bg-gradient-section">
         <div className="container-wide">
-          <div className="text-center mb-16">
-            <span className="text-[var(--color-forest)] text-sm font-medium tracking-wide uppercase">Våre klinikker</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mt-4 mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Våre klinikker</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
               Finn oss i Oslo og Tromsø
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             {[
               {
                 city: "Oslo",
@@ -523,26 +542,26 @@ export default function Home() {
               }
             ].map((location, index) => (
               <div key={index} className="card">
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start justify-between mb-4 md:mb-6">
                   <div>
-                    <h3 className="text-2xl md:text-3xl mb-1">{location.city}</h3>
-                    <p className="text-[var(--color-charcoal-light)]">{location.address}</p>
-                    <p className="text-[var(--color-charcoal-light)]">{location.postal}</p>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl mb-1">{location.city}</h3>
+                    <p className="text-[var(--color-charcoal-light)] text-sm md:text-base">{location.address}</p>
+                    <p className="text-[var(--color-charcoal-light)] text-sm md:text-base">{location.postal}</p>
                   </div>
-                  <div className="w-12 h-12 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)]">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)]">
                     <MapPinIcon />
                   </div>
                 </div>
-                <div className="space-y-3 pt-6 border-t border-[var(--color-sage-light)]">
-                  <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
+                <div className="space-y-2 md:space-y-3 pt-4 md:pt-6 border-t border-[var(--color-sage-light)]">
+                  <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 md:gap-3 text-[var(--color-charcoal-light)] text-sm md:text-base hover:text-[var(--color-forest)] transition-colors">
                     <PhoneIcon />
                     <span>{location.phone}</span>
                   </a>
-                  <a href={`mailto:${location.email}`} className="flex items-center gap-3 text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
+                  <a href={`mailto:${location.email}`} className="flex items-center gap-2 md:gap-3 text-[var(--color-charcoal-light)] text-sm md:text-base hover:text-[var(--color-forest)] transition-colors break-all">
                     <EmailIcon />
                     <span>{location.email}</span>
                   </a>
-                  <div className="flex items-center gap-3 text-[var(--color-charcoal-light)]">
+                  <div className="flex items-center gap-2 md:gap-3 text-[var(--color-charcoal-light)] text-sm md:text-base">
                     <ClockIcon />
                     <span>{location.hours}</span>
                   </div>
@@ -555,28 +574,28 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-[var(--section-padding)] bg-[var(--color-forest)] relative overflow-hidden">
-        <div className="organic-shape w-[500px] h-[500px] -top-40 -right-40 opacity-10" />
-        <div className="organic-shape w-[300px] h-[300px] bottom-0 left-0 opacity-10" style={{ animationDelay: "3s" }} />
+        <div className="organic-shape w-[250px] md:w-[500px] h-[250px] md:h-[500px] -top-20 md:-top-40 -right-20 md:-right-40 opacity-10" />
+        <div className="organic-shape w-[150px] md:w-[300px] h-[150px] md:h-[300px] bottom-0 left-0 opacity-10" style={{ animationDelay: "3s" }} />
 
         <div className="container-narrow text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6">
             Klar for å ta steget?
           </h2>
-          <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
+          <p className="text-white/80 text-sm md:text-lg max-w-xl mx-auto mb-6 md:mb-8">
             Book din forundersøkelse i dag og ta første steg mot et liv uten
             ubehag fra åreknuter.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a
               href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[var(--color-forest)] font-medium rounded hover:bg-[var(--color-cream)] transition-colors"
+              className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-white text-[var(--color-forest)] font-medium text-sm md:text-base rounded hover:bg-[var(--color-cream)] transition-colors"
             >
               Bestill forundersøkelse
               <ArrowRightIcon />
             </a>
             <a
               href="tel:40044600"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 border-2 border-white/30 text-white font-medium text-sm md:text-base rounded hover:bg-white/10 transition-colors"
             >
               <PhoneIcon />
               400 44 600
@@ -586,26 +605,26 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="footer py-16">
+      <footer className="footer py-10 md:py-16">
         <div className="container-wide">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div className="md:col-span-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
+            <div className="col-span-2">
               <img
                 src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
                 alt="Åreknuteekspertene"
-                className="h-12 w-auto mb-4 brightness-0 invert"
+                className="h-10 md:h-12 w-auto mb-3 md:mb-4 brightness-0 invert"
               />
-              <p className="text-white/70 max-w-md mb-6">
+              <p className="text-white/70 text-sm md:text-base max-w-md mb-4 md:mb-6">
                 Norges ledende spesialistklinikk for åreknutebehandling.
                 Vi kombinerer medisinsk ekspertise med omsorg for å gi deg
                 best mulig resultat.
               </p>
-              <div className="flex flex-col gap-3">
-                <a href="tel:40044600" className="flex items-center gap-2 text-white/80 hover:text-white">
+              <div className="flex flex-col gap-2 md:gap-3">
+                <a href="tel:40044600" className="flex items-center gap-2 text-white/80 hover:text-white text-sm md:text-base">
                   <PhoneIcon />
                   400 44 600
                 </a>
-                <a href="mailto:post@areknuteekspertene.no" className="flex items-center gap-2 text-white/80 hover:text-white">
+                <a href="mailto:post@areknuteekspertene.no" className="flex items-center gap-2 text-white/80 hover:text-white text-sm md:text-base break-all">
                   <EmailIcon />
                   post@areknuteekspertene.no
                 </a>
@@ -613,8 +632,8 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-medium mb-4">Hurtiglenker</h4>
-              <ul className="space-y-3">
+              <h4 className="text-white font-medium mb-3 md:mb-4 text-sm md:text-base">Hurtiglenker</h4>
+              <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
                 <li><a href="#behandlinger">Behandlinger</a></li>
                 <li><a href="#prosess">Slik fungerer det</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -623,25 +642,25 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-medium mb-4">Klinikker</h4>
-              <ul className="space-y-3">
+              <h4 className="text-white font-medium mb-3 md:mb-4 text-sm md:text-base">Klinikker</h4>
+              <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
                 <li>
                   <a href="#kontakt">Oslo</a>
-                  <span className="block text-white/50 text-sm">Sørkedalsveien 10A</span>
+                  <span className="block text-white/50 text-xs md:text-sm">Sørkedalsveien 10A</span>
                 </li>
                 <li>
                   <a href="#kontakt">Tromsø</a>
-                  <span className="block text-white/50 text-sm">Storgata 94</span>
+                  <span className="block text-white/50 text-xs md:text-sm">Storgata 94</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="line-decoration mb-8 opacity-30" />
+          <div className="line-decoration mb-6 md:mb-8 opacity-30" />
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-white/50 text-xs md:text-sm">
             <p>&copy; {new Date().getFullYear()} Åreknuteekspertene. Alle rettigheter reservert.</p>
-            <div className="flex gap-6">
+            <div className="flex gap-4 md:gap-6">
               <a href="#" className="hover:text-white">Personvern</a>
               <a href="#" className="hover:text-white">Vilkår</a>
               <a href="#" className="hover:text-white">Cookies</a>
@@ -653,7 +672,7 @@ export default function Home() {
       {/* Price Modal */}
       {priceModalOpen && (
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+          className="fixed inset-0 z-[200] flex items-end md:items-center justify-center p-0 md:p-4"
           onClick={() => setPriceModalOpen(false)}
         >
           {/* Backdrop */}
@@ -661,14 +680,14 @@ export default function Home() {
 
           {/* Modal */}
           <div
-            className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fade-in-up shadow-2xl"
+            className="relative bg-white rounded-t-2xl md:rounded-2xl max-w-2xl w-full max-h-[85vh] md:max-h-[90vh] overflow-hidden animate-fade-in-up shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="bg-[var(--color-forest)] px-6 py-5 flex justify-between items-center">
+            <div className="bg-[var(--color-forest)] px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
               <div>
-                <h2 className="text-2xl font-serif text-white">Prisliste</h2>
-                <p className="text-white/70 text-sm">Åreknuteekspertene 2024</p>
+                <h2 className="text-xl md:text-2xl font-serif text-white">Prisliste</h2>
+                <p className="text-white/70 text-xs md:text-sm">Åreknuteekspertene 2025</p>
               </div>
               <button
                 onClick={() => setPriceModalOpen(false)}
@@ -680,23 +699,23 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
+            <div className="p-4 md:p-6 overflow-y-auto max-h-[calc(85vh-140px)] md:max-h-[calc(90vh-180px)]">
               {/* Konsultasjon */}
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-[var(--color-forest)] mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-sm">1</span>
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-base md:text-lg font-semibold text-[var(--color-forest)] mb-3 md:mb-4 flex items-center gap-2">
+                  <span className="w-6 md:w-8 h-6 md:h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-xs md:text-sm">1</span>
                   Konsultasjon
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   {priceData.konsultasjon.map((item, index) => (
-                    <div key={index} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-0">
-                      <div>
-                        <span className="text-[var(--color-charcoal)]">{item.name}</span>
+                    <div key={index} className="flex justify-between items-start py-2 md:py-3 border-b border-gray-100 last:border-0">
+                      <div className="flex-1 min-w-0 pr-2">
+                        <span className="text-[var(--color-charcoal)] text-sm md:text-base">{item.name}</span>
                         {item.note && (
-                          <span className="block text-sm text-[var(--color-forest)] mt-0.5">{item.note}</span>
+                          <span className="block text-xs md:text-sm text-[var(--color-forest)] mt-0.5">{item.note}</span>
                         )}
                       </div>
-                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap ml-4">
+                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap text-sm md:text-base">
                         {item.price === "0" ? "Gratis" : `kr ${item.price},-`}
                       </span>
                     </div>
@@ -705,21 +724,21 @@ export default function Home() {
               </div>
 
               {/* Behandlinger */}
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-[var(--color-forest)] mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-sm">2</span>
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-base md:text-lg font-semibold text-[var(--color-forest)] mb-3 md:mb-4 flex items-center gap-2">
+                  <span className="w-6 md:w-8 h-6 md:h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-xs md:text-sm">2</span>
                   Behandlinger
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   {priceData.behandlinger.map((item, index) => (
-                    <div key={index} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-0">
-                      <div>
-                        <span className="text-[var(--color-charcoal)]">{item.name}</span>
+                    <div key={index} className="flex justify-between items-start py-2 md:py-3 border-b border-gray-100 last:border-0">
+                      <div className="flex-1 min-w-0 pr-2">
+                        <span className="text-[var(--color-charcoal)] text-sm md:text-base">{item.name}</span>
                         {item.note && (
-                          <span className="block text-sm text-[var(--color-charcoal-light)] mt-0.5">{item.note}</span>
+                          <span className="block text-xs md:text-sm text-[var(--color-charcoal-light)] mt-0.5">{item.note}</span>
                         )}
                       </div>
-                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap ml-4">
+                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap text-sm md:text-base">
                         kr {item.price},-
                       </span>
                     </div>
@@ -728,21 +747,21 @@ export default function Home() {
               </div>
 
               {/* Tillegg */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-[var(--color-forest)] mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-sm">3</span>
+              <div className="mb-4 md:mb-6">
+                <h3 className="text-base md:text-lg font-semibold text-[var(--color-forest)] mb-3 md:mb-4 flex items-center gap-2">
+                  <span className="w-6 md:w-8 h-6 md:h-8 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-xs md:text-sm">3</span>
                   Tillegg
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   {priceData.tillegg.map((item, index) => (
-                    <div key={index} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-0">
-                      <div>
-                        <span className="text-[var(--color-charcoal)]">{item.name}</span>
+                    <div key={index} className="flex justify-between items-start py-2 md:py-3 border-b border-gray-100 last:border-0">
+                      <div className="flex-1 min-w-0 pr-2">
+                        <span className="text-[var(--color-charcoal)] text-sm md:text-base">{item.name}</span>
                         {item.note && (
-                          <span className="block text-sm text-[var(--color-charcoal-light)] mt-0.5">{item.note}</span>
+                          <span className="block text-xs md:text-sm text-[var(--color-charcoal-light)] mt-0.5">{item.note}</span>
                         )}
                       </div>
-                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap ml-4">
+                      <span className="font-semibold text-[var(--color-charcoal)] whitespace-nowrap text-sm md:text-base">
                         kr {item.price},-
                       </span>
                     </div>
@@ -751,8 +770,8 @@ export default function Home() {
               </div>
 
               {/* Info box */}
-              <div className="bg-[var(--color-sage-light)] rounded-xl p-4 mt-6">
-                <p className="text-sm text-[var(--color-forest)]">
+              <div className="bg-[var(--color-sage-light)] rounded-lg md:rounded-xl p-3 md:p-4 mt-4 md:mt-6">
+                <p className="text-xs md:text-sm text-[var(--color-forest)]">
                   <strong>Forsikring:</strong> De fleste helseforsikringer dekker behandling av åreknuter.
                   Vi hjelper deg med nødvendig dokumentasjon.
                 </p>
@@ -760,17 +779,17 @@ export default function Home() {
             </div>
 
             {/* Footer */}
-            <div className="px-6 py-4 bg-gray-50 border-t flex flex-col sm:flex-row gap-3">
+            <div className="px-4 md:px-6 py-3 md:py-4 bg-gray-50 border-t flex flex-col sm:flex-row gap-2 md:gap-3">
               <a
                 href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
-                className="btn-primary flex-1 justify-center"
+                className="btn-primary flex-1 justify-center text-sm md:text-base"
               >
                 Bestill forundersøkelse
                 <ArrowRightIcon />
               </a>
               <a
                 href="tel:40044600"
-                className="btn-secondary flex-1 justify-center"
+                className="btn-secondary flex-1 justify-center text-sm md:text-base"
               >
                 <PhoneIcon />
                 Ring oss

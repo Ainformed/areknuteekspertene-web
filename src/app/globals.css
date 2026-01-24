@@ -467,19 +467,78 @@ h1, h2, h3, h4 {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   :root {
-    --section-padding: 3rem;
+    --section-padding: 2.5rem;
   }
 
   .card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .testimonial-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .testimonial-card::before {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    top: 1rem;
+    left: 1.25rem;
+  }
+
+  .stat-number {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    padding: 1.25rem 0;
+  }
+
+  .process-line {
+    left: 16px;
+    top: 32px;
+  }
+
+  .process-dot {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 2rem;
+  }
+
+  .container-wide,
+  .container-narrow {
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .testimonial-card::before {
+    font-size: 2rem;
+    top: 0.75rem;
+    left: 1rem;
   }
 }
 
