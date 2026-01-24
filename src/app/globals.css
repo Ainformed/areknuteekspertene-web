@@ -2,11 +2,11 @@
 
 /* ===== DESIGN TOKENS ===== */
 :root {
-  /* Colors - Nordic Medical Sanctuary */
-  --color-forest: #1B4332;
-  --color-forest-light: #2D5A45;
-  --color-sage: #A7C4A0;
-  --color-sage-light: #D4E5D0;
+  /* Colors - Åreknuteekspertene Brand */
+  --color-forest: #1ba9c4;
+  --color-forest-light: #22c1de;
+  --color-sage: #8ED5E4;
+  --color-sage-light: #D4F1F7;
   --color-cream: #FAF8F5;
   --color-cream-dark: #F5F1EC;
   --color-charcoal: #2D3436;

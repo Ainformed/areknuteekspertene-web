@@ -149,9 +149,11 @@ export default function Home() {
       <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
         <div className="container-wide py-4 flex justify-between items-center">
           <a href="#" className="flex items-center gap-2">
-            <span className="font-serif text-xl md:text-2xl font-semibold text-[var(--color-forest)]">
-              Åreknuteekspertene
-            </span>
+            <img
+              src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
+              alt="Åreknuteekspertene"
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -543,9 +545,11 @@ export default function Home() {
         <div className="container-wide">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
-              <span className="font-serif text-2xl font-semibold text-white mb-4 block">
-                Åreknuteekspertene
-              </span>
+              <img
+                src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
+                alt="Åreknuteekspertene"
+                className="h-12 w-auto mb-4 brightness-0 invert"
+              />
               <p className="text-white/70 max-w-md mb-6">
                 Norges ledende spesialistklinikk for åreknutebehandling.
                 Vi kombinerer medisinsk ekspertise med omsorg for å gi deg
