@@ -132,25 +132,22 @@ const faqData = [
 ];
 
 // Testimonials Data - Generelle pasientopplevelser (ikke spesifikke resultatpåstander)
+// Ekte anmeldelser fra Legelisten.no
 const testimonials = [
   {
-    text: "Jeg satte stor pris på den grundige forundersøkelsen og at alt ble forklart tydelig. Personalet var profesjonelle og jeg følte meg godt ivaretatt gjennom hele prosessen.",
-    author: "Pasient",
-    location: "Oslo-klinikken",
+    text: "En dyktig lege som vet hva han gjør. Han lytter og forklarer. Veldig hyggelig kirurg og øvrig personale. Denne legen anbefales på det sterkeste.",
+    author: "Verifisert pasient",
+    location: "Legelisten.no",
+    date: "Februar 2023",
     rating: 5
   },
   {
-    text: "God oppfølging og enkel timebestilling. Legen tok seg tid til å svare på alle spørsmålene mine og forklarte hva jeg kunne forvente. Veldig fornøyd med servicen.",
-    author: "Pasient",
-    location: "Tromsø-klinikken",
+    text: "En dyktig og sympatisk lege, med et team som gjorde at jeg slappet godt av. Ble guidet gjennom ulike deler av undersøkelse og operasjon, så det var en trygg og positiv opplevelse. Anbefales!",
+    author: "Verifisert pasient",
+    location: "Legelisten.no",
+    date: "Desember 2021",
     rating: 5
   },
-  {
-    text: "Fleksible timer som passet med jobben min. Profesjonelt og hyggelig personale. Fikk god informasjon om ettervern og oppfølging.",
-    author: "Pasient",
-    location: "Oslo-klinikken",
-    rating: 5
-  }
 ];
 
 // Price Data (Fra areknuteekspertene.no - gjeldende priser)
@@ -160,11 +157,11 @@ const priceData = {
     { name: "Kontroll etter behandling", price: "0", note: "Inkludert i 12 måneder" },
   ],
   behandlinger: [
-    { name: "Laserbehandling (EVLA) - ett ben", price: "fra 10 000", note: "Avhengig av omfang" },
-    { name: "Laserbehandling (EVLA) - begge ben", price: "fra 16 000", note: "Behandle begge samme dag" },
-    { name: "Åreknutebehandling - ett ben", price: "fra 5 000", note: "Kombinasjonsbehandling" },
-    { name: "Åreknutebehandling - begge ben", price: "fra 10 000", note: "Kombinasjonsbehandling" },
-    { name: "Skumbehandling", price: "fra 1 500", note: "Per behandling" },
+    { name: "Åreknutebehandling - ett ben", price: "fra 5 000", note: "Laser + mikroflebektomi" },
+    { name: "Åreknutebehandling - begge ben", price: "fra 10 000", note: "Samme dag" },
+    { name: "EVLA Laser - ett ben", price: "fra 10 000", note: "Kun laserbehandling" },
+    { name: "EVLA Laser - begge ben", price: "fra 16 000", note: "Samme dag" },
+    { name: "Sklerosering", price: "fra 1 500", note: "Sprengte blodkar" },
   ],
   tillegg: [
     { name: "Kompresjonsstrømper", price: "450", note: "Per par" },
@@ -174,22 +171,22 @@ const priceData = {
 // Services Data
 const services = [
   {
-    title: "Endovenøs laserbehandling",
-    description: "Gullstandarden for behandling av større åreknuter. Laseren lukker den syke venen innenfra.",
-    duration: "45-60 min",
+    title: "EVLA Laserbehandling",
+    description: "Moderne laserbehandling der laserfiberet føres inn i venen og lukker den innenfra. Erstatter tradisjonell stripping.",
+    duration: "Ca. 1 time",
     recovery: "Samme dag"
   },
   {
-    title: "Skumbehandling",
-    description: "Effektiv metode for mellomstore åreknuter. Skummet irriterer veneveggen slik at den lukkes.",
-    duration: "30 min",
-    recovery: "Umiddelbart"
+    title: "Mikroflebektomi",
+    description: "Åreknutene fjernes gjennom små innstikk (0,8 mm) med heklenålsteknikk. Gir godt kosmetisk resultat uten arr.",
+    duration: "30-45 min",
+    recovery: "Samme dag"
   },
   {
-    title: "Mikroflebektomi",
-    description: "Fjerner synlige åreknuter gjennom minimale snitt. Gir umiddelbart kosmetisk resultat.",
-    duration: "30-45 min",
-    recovery: "1-2 dager"
+    title: "Sklerosering",
+    description: "Injeksjonsbehandling for synlige blodkar og sprengte årer. Irriterer åreveggen slik at den lukkes permanent.",
+    duration: "30 min",
+    recovery: "Umiddelbart"
   }
 ];
 
@@ -436,17 +433,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Team Section */}
       <section id="om-oss" className="py-[var(--section-padding)] bg-gradient-section">
         <div className="container-wide">
           <div className="text-center mb-10 md:mb-16">
-            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Hva pasientene sier</span>
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Vårt team</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
-              Ekte historier, ekte resultater
+              Erfarne spesialister
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-6 md:p-10">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+                <div className="w-32 h-32 md:w-40 md:h-40 bg-[var(--color-sage-light)] rounded-2xl flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center">
+                  <span className="text-4xl md:text-5xl text-[var(--color-forest)] font-serif">TH</span>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl mb-2">Dr. Thomas Hayes</h3>
+                  <p className="text-[var(--color-forest)] font-medium mb-4">Karkirurg og daglig leder</p>
+                  <p className="text-[var(--color-charcoal-light)] text-sm md:text-base leading-relaxed mb-4">
+                    Dr. Hayes var en av de første karkirurgene i Norge til å ta i bruk moderne laserbehandling (EVLA) for åreknuter. Han er også overlege ved karkirurgisk avdeling, Sykehuset i Vestfold.
+                  </p>
+                  <div className="flex flex-wrap gap-3 justify-center md:justify-start text-xs md:text-sm">
+                    <span className="px-3 py-1 bg-[var(--color-sage-light)] text-[var(--color-forest)] rounded-full">Spesialist i karkirurgi</span>
+                    <span className="px-3 py-1 bg-[var(--color-sage-light)] text-[var(--color-forest)] rounded-full">Hos oss siden 2009</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-[var(--section-padding)] bg-[var(--color-cream)]">
+        <div className="container-wide">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Pasientopplevelser</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
+              Hva pasientene sier
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial-card">
                 <div className="flex gap-1 text-[var(--color-gold)] mb-3 md:mb-4 pt-6 md:pt-8">
@@ -457,17 +487,26 @@ export default function Home() {
                 <p className="text-[var(--color-charcoal)] text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
                   {testimonial.text}
                 </p>
-                <div className="flex items-center gap-3 pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
-                  <div className="w-8 md:w-10 h-8 md:h-10 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center text-[var(--color-forest)] font-medium text-sm md:text-base">
-                    {testimonial.author[0]}
-                  </div>
+                <div className="flex items-center justify-between pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
                   <div>
                     <div className="font-medium text-[var(--color-charcoal)] text-sm md:text-base">{testimonial.author}</div>
-                    <div className="text-xs md:text-sm text-[var(--color-charcoal-light)]">{testimonial.location}</div>
+                    <div className="text-xs text-[var(--color-charcoal-light)]">{testimonial.date}</div>
                   </div>
+                  <span className="text-xs text-[var(--color-forest)]">{testimonial.location}</span>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="https://www.legelisten.no/klinikker/12647-areknuteekspertene"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[var(--color-forest)] hover:underline"
+            >
+              Se flere anmeldelser på Legelisten.no →
+            </a>
           </div>
         </div>
       </section>
@@ -623,11 +662,10 @@ export default function Home() {
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4 brightness-0 invert"
               />
               <p className="text-white/70 text-sm md:text-base max-w-md mb-4 md:mb-6">
-                Norges ledende spesialistklinikk for åreknutebehandling.
-                Vi kombinerer medisinsk ekspertise med omsorg for å gi deg
-                best mulig resultat.
+                Spesialistklinikk for åreknuter siden 2009.
+                Laserbehandling og skumbehandling i Oslo og Tromsø.
               </p>
-              <div className="flex flex-col gap-2 md:gap-3">
+              <div className="flex flex-col gap-2 md:gap-3 mb-4">
                 <a href="tel:40044600" className="flex items-center gap-2 text-white/80 hover:text-white text-sm md:text-base">
                   <PhoneIcon />
                   400 44 600
@@ -635,6 +673,30 @@ export default function Home() {
                 <a href="mailto:post@areknuteekspertene.no" className="flex items-center gap-2 text-white/80 hover:text-white text-sm md:text-base break-all">
                   <EmailIcon />
                   post@areknuteekspertene.no
+                </a>
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.facebook.com/areknuteekspertene"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+                  aria-label="Facebook"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/areknuteekspertene/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+                  aria-label="Instagram"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                  </svg>
                 </a>
               </div>
             </div>
