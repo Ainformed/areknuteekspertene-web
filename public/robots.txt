@@ -1,0 +1,8 @@
+# Robots.txt for Åreknuteekspertene
+# https://areknuteekspertene-web.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://areknuteekspertene-web.vercel.app/sitemap.xml

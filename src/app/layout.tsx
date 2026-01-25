@@ -18,6 +18,10 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://areknuteekspertene-web.vercel.app"),
+  icons: {
+    icon: "https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png",
+    apple: "https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png",
+  },
   title: {
     default: "Åreknuteekspertene | Spesialistklinikk for åreknuter i Oslo og Tromsø",
     template: "%s | Åreknuteekspertene",
@@ -217,6 +221,92 @@ const jsonLd = {
         "@id": "https://areknuteekspertene-web.vercel.app/#organization",
       },
       inLanguage: "nb-NO",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://areknuteekspertene-web.vercel.app/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Hva er åreknuter og hvorfor oppstår de?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Åreknuter er utvidede, synlige blodårer som oftest oppstår i bena. De skyldes svekket funksjon i veneklaffene som normalt hindrer blodet i å strømme tilbake. Når klaffene ikke fungerer, samler blodet seg opp og venene utvides. Arvelige faktorer, graviditet, overvekt, alder og stående arbeid øker risikoen for å utvikle åreknuter.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hvilke symptomer gir åreknuter?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Vanlige symptomer på åreknuter inkluderer: synlige, slyngede blodårer under huden, tyngdefølelse i bena, hevelse rundt anklene, kløe og irritasjon rundt åreknutene, kramper om natten, ømhet og verking, samt misfarging av huden. Symptomene forverres ofte utover dagen og ved varme.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Gjør behandlingen vondt?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Moderne behandlingsmetoder er skånsomme og utføres med lokalbedøvelse. De fleste pasienter opplever kun et lite stikk ved bedøvelsen. Selve behandlingen er tilnærmet smertefri. Etter behandlingen kan du oppleve lett ømhet og stramhet som varer noen dager.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hva er forskjellen på laserbehandling og skumbehandling?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Laserbehandling (EVLA) er gullstandarden for behandling av større åreknuter. Et laserfiber føres inn i venen og lukker den med varme. Skumbehandling brukes for mindre og mellomstore åreknuter - et skum injiseres som irriterer veneveggen slik at den lukkes. Ofte kombineres metodene for best resultat.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hvor lang er restitusjonstiden?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Du kan gå hjem samme dag og de fleste kan gjenoppta normale aktiviteter umiddelbart. Det er vanligvis ikke behov for sykemelding. Vi anbefaler å unngå hard trening og tunge løft i 1-2 uker. Du bør bruke kompresjonsstrømper i 1-2 uker etter behandling. Full effekt av behandlingen sees etter 4-6 uker.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Dekkes behandlingen av forsikring?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, de fleste helseforsikringer dekker åreknutebehandling når det er medisinsk indisert. Vi behandler pasienter fra bl.a. Tryg, If, Storebrand, Sparebank 1, Hjelp 24 og Vertikal. Vi hjelper deg med nødvendig dokumentasjon til forsikringsselskapet.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hva koster en forundersøkelse?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Forundersøkelsen koster kr 1.200,-. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse av erfaren karkirurg og en personlig behandlingsplan.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Kan åreknuter komme tilbake etter behandling?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Moderne laserbehandling har svært lav tilbakefallsrate - rundt 5%, som er vesentlig lavere enn ved tradisjonell stripping. Det er viktig med grundig behandling første gang. Oppfølging etter 12 måneder er inkludert i prisen for å sikre best mulig resultat.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Må jeg ha henvisning fra fastlege?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Nei, du trenger ikke henvisning for å bestille time hos oss. Du kan booke forundersøkelse direkte. Ved forundersøkelsen vurderer vår karkirurg om behandling er nødvendig og hvilken metode som passer best for deg.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hva er forskjellen på åreknuter og sprengte blodkar?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Åreknuter er utvidede vener som ofte er synlige som slyngede, blålige årer under huden. Sprengte blodkar (telangiektasier) er små, tynne røde eller blå årer nær hudoverflaten. Begge tilstander kan behandles hos oss - sprengte blodkar behandles vanligvis med sklerosering.",
+          },
+        },
+      ],
     },
   ],
 };
