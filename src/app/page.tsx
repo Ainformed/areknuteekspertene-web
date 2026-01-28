@@ -288,7 +288,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-hero min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-20 pb-12 md:pb-16 relative overflow-hidden">
+      <section className="bg-gradient-hero min-h-[70vh] md:min-h-[85vh] flex items-start pt-28 md:pt-36 pb-12 md:pb-16 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="organic-shape w-[300px] md:w-[600px] h-[300px] md:h-[600px] -top-20 md:-top-40 -right-20 md:-right-40 opacity-40 md:opacity-60" />
         <div className="organic-shape w-[200px] md:w-[400px] h-[200px] md:h-[400px] bottom-10 md:bottom-20 -left-10 md:-left-20 opacity-30 md:opacity-40" style={{ animationDelay: "2s" }} />
