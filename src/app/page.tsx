@@ -323,7 +323,7 @@ export default function Home() {
             <div className="animate-fade-in-up animation-delay-400 flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
               <span className="flex items-center gap-2">
                 <CheckIcon />
-                Over 9.000 behandlinger
+                Klinikker i Oslo og Tromsø
               </span>
               <span className="flex items-center gap-2">
                 <CheckIcon />
@@ -352,8 +352,8 @@ export default function Home() {
                     <CheckIcon />
                   </div>
                   <div>
-                    <div className="text-2xl font-serif text-[var(--color-forest)]">9.000+</div>
-                    <div className="text-xs text-[var(--color-charcoal-light)]">behandlinger</div>
+                    <div className="text-2xl font-serif text-[var(--color-forest)]">1 200 kr</div>
+                    <div className="text-xs text-[var(--color-charcoal-light)]">forundersøkelse</div>
                   </div>
                 </div>
               </div>
