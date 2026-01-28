@@ -300,8 +300,8 @@ export default function Home() {
             </div>
 
             <h1 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[var(--color-charcoal)] mb-4 md:mb-6 text-balance">
-              Usikker på om du har
-              <span className="block text-[var(--color-forest)]">åreknuter eller sprengte blodkar?</span>
+              Bli kvitt åreknuter
+              <span className="block text-[var(--color-forest)]">skånsomt og effektivt</span>
             </h1>
 
             <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-2xl mb-6 md:mb-8 leading-relaxed">
