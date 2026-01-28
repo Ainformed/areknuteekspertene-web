@@ -319,14 +319,8 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Price Box */}
-            <div className="animate-fade-in-up animation-delay-400 bg-white border border-[var(--color-sage)] rounded-xl p-4 mb-6 inline-block">
-              <div className="text-xl md:text-2xl font-serif text-[var(--color-forest)] mb-1">Forundersøkelse kr 1.200,-</div>
-              <div className="text-sm text-[var(--color-charcoal-light)]">Trekkes fra ved behandling</div>
-            </div>
-
             {/* Trust Line */}
-            <div className="animate-fade-in-up animation-delay-500 flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
+            <div className="animate-fade-in-up animation-delay-400 flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
               <span className="flex items-center gap-2">
                 <CheckIcon />
                 Over 9.000 behandlinger
