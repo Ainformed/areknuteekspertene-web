@@ -19,8 +19,8 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://areknuteekspertene-web.vercel.app"),
   icons: {
-    icon: "https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png",
-    apple: "https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
   title: {
     default: "Åreknuteekspertene | Spesialistklinikk for åreknuter i Oslo og Tromsø",
