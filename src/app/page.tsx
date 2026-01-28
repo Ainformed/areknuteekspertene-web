@@ -115,7 +115,7 @@ const faqData = [
   },
   {
     question: "Hva koster en forundersøkelse?",
-    answer: "Forundersøkelsen koster kr 1.200,-. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse av erfaren karkirurg og en personlig behandlingsplan."
+    answer: "Forundersøkelsen koster kr 1.200. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse av erfaren karkirurg og en personlig behandlingsplan."
   },
   {
     question: "Kan åreknuter komme tilbake etter behandling?",
@@ -993,7 +993,7 @@ export default function Home() {
           href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
           className="flex items-center justify-center gap-2 w-full py-3 bg-[var(--color-forest)] text-white font-medium rounded-lg hover:bg-[var(--color-forest-light)] transition-colors"
         >
-          Bestill forundersøkelse – kr 1.200,-
+          Bestill forundersøkelse – kr 1.200
           <ArrowRightIcon />
         </a>
       </div>

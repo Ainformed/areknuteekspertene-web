@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "åreknuter behandling pris",
     "åreknuter operasjon",
     "sprengte blodkar",
-    "Dr. Thomas Hayes",
+    "Thomas Hayes",
   ],
   authors: [{ name: "Åreknuteekspertene" }],
   creator: "Åreknuteekspertene",
@@ -203,7 +203,7 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": "https://areknuteekspertene-web.vercel.app/#dr-hayes",
-      name: "Dr. Thomas Hayes",
+      name: "Thomas Hayes",
       jobTitle: "Karkirurg og daglig leder",
       worksFor: {
         "@id": "https://areknuteekspertene-web.vercel.app/#organization",
@@ -279,7 +279,7 @@ const jsonLd = {
           name: "Hva koster en forundersøkelse?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Forundersøkelsen koster kr 1.200,-. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse av erfaren karkirurg og en personlig behandlingsplan.",
+            text: "Forundersøkelsen koster kr 1.200. Dette beløpet trekkes fra totalprisen dersom du velger å gjennomføre behandling hos oss. Under forundersøkelsen får du en grundig ultralydundersøkelse av erfaren karkirurg og en personlig behandlingsplan.",
           },
         },
         {
