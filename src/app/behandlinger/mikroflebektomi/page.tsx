@@ -72,7 +72,7 @@ export default function MikroflebektomiPage() {
                 De fleste pasienter er svært fornøyde med det kosmetiske resultatet.
               </p>
             </div>
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-6">Fordeler med mikroflebektomi</h3>
               <ul className="space-y-4">
                 {[
@@ -139,12 +139,12 @@ export default function MikroflebektomiPage() {
                 { name: "Åreknutebehandling - ett ben", price: "fra 5 000 kr", note: "Laser + mikroflebektomi" },
                 { name: "Åreknutebehandling - begge ben", price: "fra 10 000 kr", note: "Samme dag" },
               ].map((item, index) => (
-                <div key={index} className="flex justify-between items-center py-4 border-b border-[var(--color-sage-light)]">
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-[var(--color-sage-light)] gap-1 sm:gap-4">
                   <div>
                     <span className="font-medium">{item.name}</span>
                     {item.note && <span className="block text-sm text-[var(--color-charcoal-light)]">{item.note}</span>}
                   </div>
-                  <span className="font-semibold">{item.price}</span>
+                  <span className="font-semibold text-[var(--color-forest)] sm:text-inherit">{item.price}</span>
                 </div>
               ))}
             </div>

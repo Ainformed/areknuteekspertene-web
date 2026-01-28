@@ -173,20 +173,17 @@ const services = [
   {
     title: "EVLA Laserbehandling",
     description: "Moderne laserbehandling der laserfiberet føres inn i venen og lukker den innenfra. Erstatter tradisjonell stripping.",
-    duration: "Ca. 1 time",
-    recovery: "Samme dag"
+    duration: "Ca. 1 time"
   },
   {
     title: "Mikroflebektomi",
     description: "Åreknutene fjernes gjennom små innstikk (0,8 mm) med heklenålsteknikk. Gir godt kosmetisk resultat uten arr.",
-    duration: "30-45 min",
-    recovery: "Samme dag"
+    duration: "30-45 min"
   },
   {
     title: "Skumbehandling",
     description: "Skumbehandling (sklerosering) for synlige blodkar og sprengte årer. Skummet lukker åren permanent.",
-    duration: "30 min",
-    recovery: "Umiddelbart"
+    duration: "Ca. 30 min"
   }
 ];
 
@@ -211,12 +208,12 @@ export default function Home() {
 
       {/* Header */}
       <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
-        <div className="container-wide py-3 flex justify-between items-center">
+        <div className="container-wide py-4 md:py-3 flex justify-between items-center">
           <a href="#" className="flex items-center">
             <img
               src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
               alt="Åreknuteekspertene"
-              className="h-12 md:h-16 w-auto"
+              className="h-12 md:h-14 w-auto"
             />
           </a>
 
@@ -294,7 +291,8 @@ export default function Home() {
         <div className="organic-shape w-[200px] md:w-[400px] h-[200px] md:h-[400px] bottom-10 md:bottom-20 -left-10 md:-left-20 opacity-30 md:opacity-40" style={{ animationDelay: "2s" }} />
 
         <div className="container-wide relative z-10">
-          <div className="max-w-4xl">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="max-w-xl">
             <div className="animate-fade-in-up">
               <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-xs md:text-sm font-medium rounded-full mb-4 md:mb-6">
                 Norges ledende spesialistklinikk
@@ -332,6 +330,31 @@ export default function Home() {
               </span>
             </div>
           </div>
+
+          {/* Hero Image */}
+          <div className="hidden lg:block relative animate-fade-in animation-delay-300">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-[var(--color-sage-light)] rounded-3xl -rotate-3"></div>
+              <img
+                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=700&fit=crop&crop=center"
+                alt="Moderne klinikkutstyr"
+                className="relative rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover"
+              />
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-[var(--color-forest)] rounded-full flex items-center justify-center text-white">
+                    <CheckIcon />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-serif text-[var(--color-forest)]">15+</div>
+                    <div className="text-xs text-[var(--color-charcoal-light)]">års erfaring</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </section>
 
@@ -349,7 +372,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          {/* Mobile: List layout, Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               { title: "Hovne bein", desc: "Hevelse som forverres utover dagen", href: "/symptomer/hovne-bein" },
               { title: "Kramper i bena", desc: "Spesielt om natten", href: "/symptomer/kramper-i-bena" },
@@ -365,8 +389,38 @@ export default function Home() {
                 <div className="w-12 h-12 mx-auto bg-[var(--color-sage-light)] rounded-full flex items-center justify-center mb-3 group-hover:bg-[var(--color-sage)] transition-colors">
                   <CheckIcon />
                 </div>
-                <h3 className="text-base md:text-lg font-medium mb-1">{symptom.title}</h3>
-                <p className="text-xs md:text-sm text-[var(--color-charcoal-light)]">{symptom.desc}</p>
+                <h3 className="text-lg font-medium mb-1">{symptom.title}</h3>
+                <p className="text-sm text-[var(--color-charcoal-light)]">{symptom.desc}</p>
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile: Stacked clickable cards */}
+          <div className="md:hidden space-y-3">
+            {[
+              { title: "Hovne bein", desc: "Hevelse som forverres utover dagen", href: "/symptomer/hovne-bein" },
+              { title: "Kramper i bena", desc: "Spesielt om natten", href: "/symptomer/kramper-i-bena" },
+              { title: "Tunge, trette ben", desc: "Tyngdefølelse og ubehag", href: "/symptomer/tunge-bein" },
+              { title: "Synlige blodårer", desc: "Slyngede, blålige årer", href: "/symptomer/synlige-blodarer" },
+              { title: "Kløe rundt årer", desc: "Irritasjon ved synlige årer", href: "/behandlinger/skumbehandling" },
+            ].map((symptom, index) => (
+              <a
+                key={index}
+                href={symptom.href}
+                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-[var(--color-sage-light)] hover:border-[var(--color-forest)] hover:shadow-md active:scale-[0.98] transition-all"
+              >
+                <div className="w-12 h-12 bg-[var(--color-sage-light)] rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckIcon />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-medium text-[var(--color-charcoal)]">{symptom.title}</h3>
+                  <p className="text-sm text-[var(--color-charcoal-light)]">{symptom.desc}</p>
+                </div>
+                <div className="text-[var(--color-forest)] flex-shrink-0">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </a>
             ))}
           </div>
@@ -407,12 +461,9 @@ export default function Home() {
                   </div>
                   <h3 className="text-lg md:text-xl lg:text-2xl mb-2 md:mb-3">{service.title}</h3>
                   <p className="text-[var(--color-charcoal-light)] text-sm md:text-base mb-4 md:mb-6">{service.description}</p>
-                  <div className="flex flex-wrap gap-3 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)] pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
-                    <span className="flex items-center gap-1.5 md:gap-2">
-                      <ClockIcon />
-                      {service.duration}
-                    </span>
-                    <span>Restitusjon: {service.recovery}</span>
+                  <div className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm text-[var(--color-charcoal-light)] pt-3 md:pt-4 border-t border-[var(--color-sage-light)]">
+                    <ClockIcon />
+                    {service.duration}
                   </div>
                 </div>
               );
@@ -493,8 +544,12 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="card p-6 md:p-10">
               <div className="flex flex-col md:flex-row gap-6 md:gap-10">
-                <div className="w-32 h-32 md:w-40 md:h-40 bg-[var(--color-sage-light)] rounded-2xl flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center">
-                  <span className="text-4xl md:text-5xl text-[var(--color-forest)] font-serif">TH</span>
+                <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl flex-shrink-0 mx-auto md:mx-0 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+                    alt="Dr. Thomas Hayes"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-xl md:text-2xl lg:text-3xl mb-2">Dr. Thomas Hayes</h3>
@@ -623,7 +678,8 @@ export default function Home() {
                 phone: "400 44 600",
                 email: "post@areknuteekspertene.no",
                 hours: "Man-Fre: 08:00-16:00",
-                mapUrl: "https://maps.google.com/?q=Sørkedalsveien+10A,+0369+Oslo"
+                mapUrl: "https://maps.google.com/?q=Sørkedalsveien+10A,+0369+Oslo",
+                image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=300&fit=crop"
               },
               {
                 city: "Tromsø",
@@ -632,10 +688,19 @@ export default function Home() {
                 phone: "400 44 600",
                 email: "post@areknuteekspertene.no",
                 hours: "Man-Fre: 08:00-16:00",
-                mapUrl: "https://maps.google.com/?q=Storgata+94,+9008+Tromsø"
+                mapUrl: "https://maps.google.com/?q=Storgata+94,+9008+Tromsø",
+                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=300&fit=crop"
               }
             ].map((location, index) => (
-              <div key={index} className="card">
+              <div key={index} className="card overflow-hidden p-0">
+                <div className="h-40 md:h-48 overflow-hidden">
+                  <img
+                    src={location.image}
+                    alt={`Klinikk ${location.city}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5 md:p-6">
                 <a href={location.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-start justify-between mb-4 md:mb-6 group">
                   <div>
                     <h3 className="text-xl md:text-2xl lg:text-3xl mb-1 group-hover:text-[var(--color-forest)] transition-colors">{location.city}</h3>
@@ -659,6 +724,7 @@ export default function Home() {
                     <ClockIcon />
                     <span>{location.hours}</span>
                   </div>
+                </div>
                 </div>
               </div>
             ))}

@@ -71,7 +71,7 @@ export default function LaserbehandlingPage() {
                 og har utført tusenvis av vellykkede inngrep siden 2009.
               </p>
             </div>
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-6">Fordeler med laserbehandling</h3>
               <ul className="space-y-4">
                 {[
@@ -97,7 +97,7 @@ export default function LaserbehandlingPage() {
       <section className="py-16 md:py-24 bg-[var(--color-cream)]">
         <div className="container-wide">
           <h2 className="text-3xl md:text-4xl text-center mb-12">Slik foregår behandlingen</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 step: "1",
@@ -143,12 +143,12 @@ export default function LaserbehandlingPage() {
                 { name: "EVLA Laser - ett ben", price: "fra 10 000 kr", note: "Avhengig av omfang" },
                 { name: "EVLA Laser - begge ben", price: "fra 16 000 kr", note: "Samme dag" },
               ].map((item, index) => (
-                <div key={index} className="flex justify-between items-center py-4 border-b border-[var(--color-sage-light)]">
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-[var(--color-sage-light)] gap-1 sm:gap-4">
                   <div>
                     <span className="font-medium">{item.name}</span>
                     {item.note && <span className="block text-sm text-[var(--color-charcoal-light)]">{item.note}</span>}
                   </div>
-                  <span className="font-semibold">{item.price}</span>
+                  <span className="font-semibold text-[var(--color-forest)] sm:text-inherit">{item.price}</span>
                 </div>
               ))}
             </div>

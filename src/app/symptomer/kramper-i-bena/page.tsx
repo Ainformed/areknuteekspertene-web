@@ -69,7 +69,7 @@ export default function KramperPage() {
                 av underliggende åreknuter.
               </p>
             </div>
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-6">Vanlige årsaker til kramper</h3>
               <ul className="space-y-4">
                 {[

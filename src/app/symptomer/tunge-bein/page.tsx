@@ -68,7 +68,7 @@ export default function TungeBeinPage() {
                 Symptomene er typisk verre etter langvarig ståen eller sitting.
               </p>
             </div>
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-6">Typiske kjennetegn</h3>
               <ul className="space-y-4">
                 {[
@@ -131,7 +131,7 @@ export default function TungeBeinPage() {
               Hvis tunge ben skyldes åreknuter, kan behandling gi varig lindring.
               Mange opplever at symptomene forsvinner helt etter behandling.
             </p>
-            <div className="card p-8 text-left">
+            <div className="card p-6 md:p-8 text-left">
               <h3 className="text-xl mb-4">Søk vurdering hvis du opplever:</h3>
               <ul className="space-y-3">
                 {[

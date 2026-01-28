@@ -53,7 +53,7 @@ export default function SynligeBlodarerPage() {
         <div className="container-wide">
           <h2 className="text-3xl md:text-4xl text-center mb-12">Typer synlige blodårer</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-4 text-[var(--color-forest)]">Åreknuter</h3>
               <p className="text-[var(--color-charcoal-light)] mb-4">
                 Større, slyngede blålige årer som buler ut under huden. Skyldes
@@ -78,7 +78,7 @@ export default function SynligeBlodarerPage() {
                 </Link>
               </div>
             </div>
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-4 text-[var(--color-forest)]">Sprengte blodkar</h3>
               <p className="text-[var(--color-charcoal-light)] mb-4">
                 Små, tynne røde eller blå årer nær hudoverflaten. Også kalt

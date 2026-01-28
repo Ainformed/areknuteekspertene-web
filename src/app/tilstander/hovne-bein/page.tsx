@@ -68,7 +68,7 @@ export default function HovneBeinPage() {
                 Bena føles tunge og trette, og du kan oppleve at sko og sokker strammer.
               </p>
             </div>
-            <div className="card p-8">
+            <div className="card p-6 md:p-8">
               <h3 className="text-xl mb-6">Vanlige årsaker til hovne bein</h3>
               <ul className="space-y-4">
                 {[
@@ -94,7 +94,7 @@ export default function HovneBeinPage() {
       <section className="py-16 md:py-24 bg-[var(--color-cream)]">
         <div className="container-wide">
           <h2 className="text-3xl md:text-4xl text-center mb-12">Symptomer på venøs insuffisiens</h2>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
               { title: "Hovne ankler", desc: "Hevelse rundt anklene som forverres utover dagen" },
               { title: "Tunge ben", desc: "Følelse av tyngde, spesielt etter langvarig ståen" },
