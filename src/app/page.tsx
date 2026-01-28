@@ -294,7 +294,7 @@ export default function Home() {
         <div className="organic-shape w-[200px] md:w-[400px] h-[200px] md:h-[400px] bottom-10 md:bottom-20 -left-10 md:-left-20 opacity-30 md:opacity-40" style={{ animationDelay: "2s" }} />
 
         <div className="container-wide relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="animate-fade-in-up">
               <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-xs md:text-sm font-medium rounded-full mb-4 md:mb-6">
                 Norges ledende spesialistklinikk
@@ -306,7 +306,7 @@ export default function Home() {
               <span className="block text-[var(--color-forest)]">skånsomt og effektivt</span>
             </h1>
 
-            <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-xl mb-6 md:mb-8 leading-relaxed">
+            <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-2xl mb-6 md:mb-8 leading-relaxed">
               Spesialistklinikk for åreknuter siden 2009. Moderne laserbehandling og skumbehandling utført av erfarne karkirurger.
             </p>
 
