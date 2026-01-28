@@ -161,7 +161,7 @@ const priceData = {
     { name: "Åreknutebehandling - begge ben", price: "fra 10 000", note: "Samme dag" },
     { name: "EVLA Laser - ett ben", price: "fra 10 000", note: "Kun laserbehandling" },
     { name: "EVLA Laser - begge ben", price: "fra 16 000", note: "Samme dag" },
-    { name: "Sklerosering", price: "fra 1 500", note: "Sprengte blodkar" },
+    { name: "Skumbehandling / Sklerosering", price: "fra 1 500", note: "Sprengte blodkar" },
   ],
   tillegg: [
     { name: "Kompresjonsstrømper", price: "450", note: "Per par" },
@@ -183,8 +183,8 @@ const services = [
     recovery: "Samme dag"
   },
   {
-    title: "Sklerosering",
-    description: "Injeksjonsbehandling for synlige blodkar og sprengte årer. Irriterer åreveggen slik at den lukkes permanent.",
+    title: "Skumbehandling",
+    description: "Skumbehandling (sklerosering) for synlige blodkar og sprengte årer. Skummet lukker åren permanent.",
     duration: "30 min",
     recovery: "Umiddelbart"
   }
@@ -351,10 +351,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {[
-              { title: "Hovne bein", desc: "Hevelse som forverres utover dagen", href: "/tilstander/hovne-bein" },
+              { title: "Hovne bein", desc: "Hevelse som forverres utover dagen", href: "/symptomer/hovne-bein" },
               { title: "Kramper i bena", desc: "Spesielt om natten", href: "/symptomer/kramper-i-bena" },
-              { title: "Tunge, trette ben", desc: "Tyngdefølelse og ubehag", href: "/tilstander/hovne-bein" },
-              { title: "Synlige blodårer", desc: "Slyngede, blålige årer", href: "/behandlinger/laserbehandling" },
+              { title: "Tunge, trette ben", desc: "Tyngdefølelse og ubehag", href: "/symptomer/tunge-bein" },
+              { title: "Synlige blodårer", desc: "Slyngede, blålige årer", href: "/symptomer/synlige-blodarer" },
               { title: "Kløe rundt årer", desc: "Irritasjon ved synlige årer", href: "/behandlinger/skumbehandling" },
             ].map((symptom, index) => (
               <a
