@@ -335,6 +335,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Symptoms Section */}
+      <section id="symptomer" className="py-[var(--section-padding)] bg-[var(--color-cream)]">
+        <div className="container-wide">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[var(--color-forest)] text-xs md:text-sm font-medium tracking-wide uppercase">Kjenner du deg igjen?</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 md:mt-4 mb-4 md:mb-6">
+              Symptomer vi behandler
+            </h2>
+            <p className="text-[var(--color-charcoal-light)] text-sm md:text-lg max-w-2xl mx-auto">
+              Mange opplever ubehag fra åreknuter uten å vite at det finnes effektiv behandling.
+              Vi hjelper deg med disse vanlige plagene.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+            {[
+              { title: "Hovne bein", desc: "Hevelse som forverres utover dagen", href: "/tilstander/hovne-bein" },
+              { title: "Kramper i bena", desc: "Spesielt om natten", href: "/symptomer/kramper-i-bena" },
+              { title: "Tunge, trette ben", desc: "Tyngdefølelse og ubehag", href: "/tilstander/hovne-bein" },
+              { title: "Synlige blodårer", desc: "Slyngede, blålige årer", href: "/behandlinger/laserbehandling" },
+              { title: "Kløe rundt årer", desc: "Irritasjon ved synlige årer", href: "/behandlinger/skumbehandling" },
+            ].map((symptom, index) => (
+              <a
+                key={index}
+                href={symptom.href}
+                className="card group text-center hover:border-[var(--color-forest)] transition-colors"
+              >
+                <div className="w-12 h-12 mx-auto bg-[var(--color-sage-light)] rounded-full flex items-center justify-center mb-3 group-hover:bg-[var(--color-sage)] transition-colors">
+                  <CheckIcon />
+                </div>
+                <h3 className="text-base md:text-lg font-medium mb-1">{symptom.title}</h3>
+                <p className="text-xs md:text-sm text-[var(--color-charcoal-light)]">{symptom.desc}</p>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-sm text-[var(--color-charcoal-light)] mb-4">
+              Opplever du <strong>blodpropp i leggen</strong>, <strong>tromboflebitt</strong> eller <strong>DVT</strong>?
+              Vi kan hjelpe med utredning og behandling.
+            </p>
+            <a href="/tilstander/blodpropp-i-bena" className="text-[var(--color-forest)] font-medium hover:underline">
+              Les mer om blodpropp og venetrombose →
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section id="behandlinger" className="py-[var(--section-padding)] bg-gradient-section">
