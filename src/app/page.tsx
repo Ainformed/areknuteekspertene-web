@@ -295,17 +295,17 @@ export default function Home() {
           <div className="max-w-xl">
             <div className="animate-fade-in-up">
               <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-xs md:text-sm font-medium rounded-full mb-4 md:mb-6">
-                Norges ledende spesialistklinikk
+                Over 9.000 behandlinger siden 2009
               </span>
             </div>
 
             <h1 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[var(--color-charcoal)] mb-4 md:mb-6 text-balance">
-              Bli kvitt åreknuter
-              <span className="block text-[var(--color-forest)]">skånsomt og effektivt</span>
+              Usikker på om du har
+              <span className="block text-[var(--color-forest)]">åreknuter eller sprengte blodkar?</span>
             </h1>
 
             <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-2xl mb-6 md:mb-8 leading-relaxed">
-              Spesialistklinikk for åreknuter siden 2009. Moderne laserbehandling og skumbehandling utført av erfarne karkirurger.
+              En forundersøkelse avklarer om behandling er nødvendig – og hvilken metode som er riktig for deg. All vurdering utføres av karkirurg Thomas Hayes.
             </p>
 
             <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
@@ -319,14 +319,25 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="animate-fade-in-up animation-delay-400 flex flex-col sm:flex-row gap-3 sm:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
+            {/* Price Box */}
+            <div className="animate-fade-in-up animation-delay-400 bg-white border border-[var(--color-sage)] rounded-xl p-4 mb-6 inline-block">
+              <div className="text-xl md:text-2xl font-serif text-[var(--color-forest)] mb-1">Forundersøkelse kr 1.200,-</div>
+              <div className="text-sm text-[var(--color-charcoal-light)]">Trekkes fra ved behandling</div>
+            </div>
+
+            {/* Trust Line */}
+            <div className="animate-fade-in-up animation-delay-500 flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
               <span className="flex items-center gap-2">
                 <CheckIcon />
-                Forundersøkelse 1 200 kr — trekkes fra behandling
+                Over 9.000 behandlinger
               </span>
               <span className="flex items-center gap-2">
-                <ClockIcon />
-                Svar innen 24 timer
+                <CheckIcon />
+                Etablert 2009
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckIcon />
+                Svar samme dag
               </span>
             </div>
           </div>
@@ -347,8 +358,8 @@ export default function Home() {
                     <CheckIcon />
                   </div>
                   <div>
-                    <div className="text-2xl font-serif text-[var(--color-forest)]">15+</div>
-                    <div className="text-xs text-[var(--color-charcoal-light)]">års erfaring</div>
+                    <div className="text-2xl font-serif text-[var(--color-forest)]">9.000+</div>
+                    <div className="text-xs text-[var(--color-charcoal-light)]">behandlinger</div>
                   </div>
                 </div>
               </div>
@@ -547,15 +558,15 @@ export default function Home() {
                 <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl flex-shrink-0 mx-auto md:mx-0 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
-                    alt="Dr. Thomas Hayes"
+                    alt="Thomas Hayes, karkirurg"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl mb-2">Dr. Thomas Hayes</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl mb-2">Thomas Hayes</h3>
                   <p className="text-[var(--color-forest)] font-medium mb-4">Karkirurg og daglig leder</p>
                   <p className="text-[var(--color-charcoal-light)] text-sm md:text-base leading-relaxed mb-4">
-                    Dr. Hayes var en av de første karkirurgene i Norge til å ta i bruk moderne laserbehandling (EVLA) for åreknuter. Han er også overlege ved karkirurgisk avdeling, Sykehuset i Vestfold.
+                    Thomas Hayes har gjennomført over 9.000 åreknutebehandlinger siden 2009. Han var en av de første karkirurgene i Norge til å ta i bruk moderne laserbehandling (EVLA). Han er også overlege ved karkirurgisk avdeling, Sykehuset i Vestfold.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center md:justify-start text-xs md:text-sm">
                     <span className="px-3 py-1 bg-[var(--color-sage-light)] text-[var(--color-forest)] rounded-full">Spesialist i karkirurgi</span>
@@ -981,6 +992,20 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-[var(--color-sage-light)] p-3 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+        <a
+          href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+          className="flex items-center justify-center gap-2 w-full py-3 bg-[var(--color-forest)] text-white font-medium rounded-lg hover:bg-[var(--color-forest-light)] transition-colors"
+        >
+          Bestill forundersøkelse – kr 1.200,-
+          <ArrowRightIcon />
+        </a>
+      </div>
+
+      {/* Spacer for sticky CTA on mobile */}
+      <div className="h-16 md:hidden" />
     </div>
   );
 }
