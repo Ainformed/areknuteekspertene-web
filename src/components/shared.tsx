@@ -199,7 +199,7 @@ export function Header() {
             400 44 600
           </a>
           <a
-            href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+            href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
             className="group flex items-center gap-2 px-5 py-2.5 border border-[var(--color-forest)] text-[var(--color-forest)] text-sm font-medium rounded-full hover:bg-[var(--color-forest)] hover:text-white transition-all duration-200"
           >
             <span>Bestill time</span>
@@ -230,7 +230,7 @@ export function Header() {
                 400 44 600
               </a>
               <a
-                href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
                 className="px-4 py-2 bg-[var(--color-forest)] text-white text-sm font-medium rounded"
               >
                 Bestill time
@@ -332,7 +332,7 @@ export function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           <a
-            href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+            href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
             className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-white text-[var(--color-forest)] font-medium text-sm md:text-base rounded hover:bg-[var(--color-cream)] transition-colors"
           >
             Bestill forundersøkelse

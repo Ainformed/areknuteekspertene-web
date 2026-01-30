@@ -35,7 +35,7 @@ export default function OsloPage() {
               skumbehandling og mikroflebektomi. Sentralt plassert med god tilgjengelighet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary">
+              <a href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c" className="btn-primary">
                 Bestill time i Oslo
                 <ArrowRightIcon />
               </a>
@@ -126,7 +126,7 @@ export default function OsloPage() {
                 <div className="text-white/60 text-sm">Trekkes fra ved behandling</div>
               </div>
               <a
-                href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
                 className="block w-full bg-white text-[var(--color-forest)] font-medium py-3 px-6 rounded text-center hover:bg-[var(--color-cream)] transition-colors"
               >
                 Bestill forundersøkelse

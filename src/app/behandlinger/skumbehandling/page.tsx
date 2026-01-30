@@ -38,7 +38,7 @@ export default function SkumbehandlingPage() {
               samt sprengte blodkar. Et skum injiseres som lukker venen permanent.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary">
+              <a href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c" className="btn-primary">
                 Bestill forundersøkelse
                 <ArrowRightIcon />
               </a>

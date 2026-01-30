@@ -35,7 +35,7 @@ export default function TungeBeinPage() {
               Tyngdefølelse i bena er et klassisk symptom på venøs insuffisiens og åreknuter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary">
+              <a href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c" className="btn-primary">
                 Bestill utredning
                 <ArrowRightIcon />
               </a>

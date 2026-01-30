@@ -235,7 +235,7 @@ export default function Home() {
               400 44 600
             </a>
             <a
-              href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+              href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
               className="group flex items-center gap-2 px-6 py-3 border border-[var(--color-forest)] text-[var(--color-forest)] text-base font-medium rounded-full hover:bg-[var(--color-forest)] hover:text-white transition-all duration-200"
             >
               <span>Bestill time</span>
@@ -273,7 +273,7 @@ export default function Home() {
                   400 44 600
                 </a>
                 <a
-                  href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                  href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
                   className="px-4 py-2 bg-[var(--color-forest)] text-white text-sm font-medium rounded"
                 >
                   Bestill time
@@ -324,7 +324,7 @@ export default function Home() {
             </p>
 
             <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-3 md:gap-4 mb-5 md:mb-8">
-              <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary text-sm md:text-base">
+              <a href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c" className="btn-primary text-sm md:text-base">
                 Bestill forundersøkelse
                 <ArrowRightIcon />
               </a>
@@ -551,7 +551,7 @@ export default function Home() {
                   <div className="text-white/60 text-xs md:text-sm">Trekkes fra ved behandling</div>
                 </div>
                 <a
-                  href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                  href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
                   className="block w-full bg-white text-[var(--color-forest)] font-medium py-3 md:py-4 px-4 md:px-6 rounded text-center text-sm md:text-base hover:bg-[var(--color-cream)] transition-colors"
                 >
                   Bestill forundersøkelse
@@ -778,7 +778,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a
-              href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+              href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
               className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-white text-[var(--color-forest)] font-medium text-sm md:text-base rounded hover:bg-[var(--color-cream)] transition-colors"
             >
               Bestill forundersøkelse
@@ -995,7 +995,7 @@ export default function Home() {
             {/* Footer */}
             <div className="px-4 md:px-6 py-3 md:py-4 bg-gray-50 border-t flex flex-col sm:flex-row gap-2 md:gap-3">
               <a
-                href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+                href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
                 className="btn-primary flex-1 justify-center text-sm md:text-base"
               >
                 Bestill forundersøkelse
@@ -1016,7 +1016,7 @@ export default function Home() {
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-[var(--color-sage-light)] p-3 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         <a
-          href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
+          href="https://psno-patient-platform-fe.svc.pasientsky.no/embedded/planner/booking?serviceProviderId=b71015c8-04a4-11ec-84e9-62713dacc91c"
           className="flex items-center justify-center gap-2 w-full py-3 bg-[var(--color-forest)] text-white font-medium rounded-lg hover:bg-[var(--color-forest-light)] transition-colors"
         >
           Bestill forundersøkelse – kr 1.200
