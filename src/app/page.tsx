@@ -208,38 +208,38 @@ export default function Home() {
 
       {/* Header */}
       <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
-        <div className="container-wide py-4 md:py-3 flex justify-between items-center">
+        <div className="container-wide py-5 md:py-4 flex justify-between items-center">
           <a href="#" className="flex items-center">
             <img
               src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
               alt="Åreknuteekspertene"
-              className="h-12 md:h-14 w-auto"
+              className="h-14 md:h-16 w-auto"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            <a href="#behandlinger" className="nav-link">Behandlinger</a>
-            <a href="#om-oss" className="nav-link">Om oss</a>
-            <a href="#faq" className="nav-link">FAQ</a>
+          <nav className="hidden lg:flex items-center gap-8">
+            <a href="#behandlinger" className="nav-link text-base">Behandlinger</a>
+            <a href="#om-oss" className="nav-link text-base">Om oss</a>
+            <a href="#faq" className="nav-link text-base">FAQ</a>
             <button
               onClick={() => setPriceModalOpen(true)}
-              className="nav-link cursor-pointer"
+              className="nav-link text-base cursor-pointer"
             >
               Priser
             </button>
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:40044600" className="text-sm text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
+          <div className="hidden md:flex items-center gap-5">
+            <a href="tel:40044600" className="text-base text-[var(--color-charcoal-light)] hover:text-[var(--color-forest)] transition-colors">
               400 44 600
             </a>
             <a
               href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking"
-              className="group flex items-center gap-2 px-5 py-2.5 border border-[var(--color-forest)] text-[var(--color-forest)] text-sm font-medium rounded-full hover:bg-[var(--color-forest)] hover:text-white transition-all duration-200"
+              className="group flex items-center gap-2 px-6 py-3 border border-[var(--color-forest)] text-[var(--color-forest)] text-base font-medium rounded-full hover:bg-[var(--color-forest)] hover:text-white transition-all duration-200"
             >
               <span>Bestill time</span>
-              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-0.5">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-0.5">
                 <path d="M4.167 10h11.666M10 4.167L15.833 10 10 15.833" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
