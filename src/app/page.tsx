@@ -285,42 +285,55 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-hero min-h-[85vh] md:min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
+      <section className="bg-gradient-hero min-h-[auto] md:min-h-screen flex items-center pt-24 pb-8 md:pt-20 md:pb-16 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="organic-shape w-[300px] md:w-[600px] h-[300px] md:h-[600px] -top-20 md:-top-40 -right-20 md:-right-40 opacity-40 md:opacity-60" />
         <div className="organic-shape w-[200px] md:w-[400px] h-[200px] md:h-[400px] bottom-10 md:bottom-20 -left-10 md:-left-20 opacity-30 md:opacity-40" style={{ animationDelay: "2s" }} />
 
         <div className="container-wide relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           <div className="max-w-xl">
             <div className="animate-fade-in-up">
-              <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-xs md:text-sm font-medium rounded-full mb-4 md:mb-6">
+              <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-[var(--color-sage-light)] text-[var(--color-forest)] text-xs md:text-sm font-medium rounded-full mb-3 md:mb-6">
                 Over 9.000 behandlinger siden 2009
               </span>
             </div>
 
-            <h1 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[var(--color-charcoal)] mb-4 md:mb-6 text-balance">
+            <h1 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[var(--color-charcoal)] mb-3 md:mb-6 text-balance">
               Bli kvitt åreknuter
               <span className="block text-[var(--color-forest)]">skånsomt og effektivt</span>
             </h1>
 
-            <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-2xl mb-6 md:mb-8 leading-relaxed">
-              En forundersøkelse avklarer om behandling er nødvendig – og hvilken metode som er riktig for deg. All vurdering utføres av karkirurg Thomas Hayes.
+            {/* Mobile Hero Image */}
+            <div className="lg:hidden relative my-5 animate-fade-in">
+              <img
+                src="https://areknuteekspertene.no/wp-content/uploads/2023/10/ELR_klinikk_web_005.jpg"
+                alt="Thomas Hayes - Karkirurg hos Åreknuteekspertene"
+                className="rounded-xl shadow-lg w-full h-[200px] object-cover object-top"
+              />
+              <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur rounded-lg shadow-md px-3 py-2">
+                <div className="text-lg font-serif text-[var(--color-forest)]">1 200 kr</div>
+                <div className="text-[10px] text-[var(--color-charcoal-light)]">forundersøkelse</div>
+              </div>
+            </div>
+
+            <p className="animate-fade-in-up animation-delay-200 text-sm md:text-lg lg:text-xl text-[var(--color-charcoal-light)] max-w-2xl mb-5 md:mb-8 leading-relaxed">
+              En forundersøkelse avklarer om behandling er nødvendig – og hvilken metode som passer deg. Vurdering av karkirurg Thomas Hayes.
             </p>
 
-            <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
-              <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary">
+            <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-3 md:gap-4 mb-5 md:mb-8">
+              <a href="https://www.telefontime.com/pasient/areknuteekspertene/#/selvbetjent/booking" className="btn-primary text-sm md:text-base">
                 Bestill forundersøkelse
                 <ArrowRightIcon />
               </a>
-              <a href="tel:40044600" className="btn-secondary">
+              <a href="tel:40044600" className="btn-secondary text-sm md:text-base">
                 <PhoneIcon />
-                Ring oss
+                Ring 400 44 600
               </a>
             </div>
 
-            {/* Trust Line */}
-            <div className="animate-fade-in-up animation-delay-400 flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
+            {/* Trust Line - Kompakt på mobil */}
+            <div className="animate-fade-in-up animation-delay-400 hidden md:flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-[var(--color-charcoal-light)]">
               <span className="flex items-center gap-2">
                 <CheckIcon />
                 Klinikker i Oslo og Tromsø
@@ -334,9 +347,20 @@ export default function Home() {
                 Svar samme dag
               </span>
             </div>
+            {/* Mobile: Enkel trust badge */}
+            <div className="animate-fade-in-up animation-delay-400 md:hidden flex items-center gap-3 text-xs text-[var(--color-charcoal-light)]">
+              <span className="flex items-center gap-1.5">
+                <CheckIcon />
+                Oslo & Tromsø
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckIcon />
+                Siden 2009
+              </span>
+            </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image - Desktop */}
           <div className="hidden lg:block relative animate-fade-in animation-delay-300">
             <div className="relative">
               <div className="absolute -inset-4 bg-[var(--color-sage-light)] rounded-3xl -rotate-3"></div>
