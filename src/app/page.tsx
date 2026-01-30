@@ -305,16 +305,16 @@ export default function Home() {
             </h1>
 
             {/* Mobile Hero Image */}
-            <div className="lg:hidden relative my-5 animate-fade-in flex justify-center">
-              <div className="relative w-[200px]">
+            <div className="lg:hidden relative my-6 animate-fade-in">
+              <div className="relative">
                 <img
                   src="https://areknuteekspertene.no/wp-content/uploads/2023/10/ELR_klinikk_web_005.jpg"
                   alt="Thomas Hayes - Karkirurg hos Åreknuteekspertene"
-                  className="rounded-xl shadow-lg w-full aspect-[3/4] object-cover object-[center_15%]"
+                  className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover object-[center_20%]"
                 />
-                <div className="absolute -bottom-2 -right-2 bg-white/95 backdrop-blur rounded-lg shadow-md px-3 py-2">
-                  <div className="text-base font-serif text-[var(--color-forest)]">1 200 kr</div>
-                  <div className="text-[10px] text-[var(--color-charcoal-light)]">forundersøkelse</div>
+                <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur rounded-xl shadow-md px-4 py-2.5">
+                  <div className="text-lg font-serif text-[var(--color-forest)]">1 200 kr</div>
+                  <div className="text-xs text-[var(--color-charcoal-light)]">forundersøkelse</div>
                 </div>
               </div>
             </div>
