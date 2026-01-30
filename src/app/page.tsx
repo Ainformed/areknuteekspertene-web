@@ -796,6 +796,67 @@ export default function Home() {
       </section>
 
       {/* Footer */}
+      {/* Maps Section */}
+      <section className="bg-[var(--color-charcoal)] py-12 md:py-16">
+        <div className="container-wide">
+          <h2 className="text-2xl md:text-3xl text-white text-center mb-8">Våre klinikker</h2>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {/* Oslo */}
+            <div className="bg-white/5 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.5!2d10.7135!3d59.9291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416dd8a8a8a8a9%3A0x0!2sS%C3%B8rkedalsveien%2010A%2C%200369%20Oslo!5e0!3m2!1sno!2sno!4v1706500000000!5m2!1sno!2sno"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+              <div className="p-4 md:p-5">
+                <h3 className="text-white font-medium text-lg mb-1">Oslo</h3>
+                <p className="text-white/70 text-sm mb-3">Sørkedalsveien 10A, 0369 Oslo</p>
+                <a
+                  href="https://www.google.com/maps/dir//S%C3%B8rkedalsveien+10A,+0369+Oslo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[var(--color-sage)] hover:text-white text-sm transition-colors"
+                >
+                  <MapPinIcon />
+                  Få veibeskrivelse
+                </a>
+              </div>
+            </div>
+            {/* Tromsø */}
+            <div className="bg-white/5 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.5!2d18.9551!3d69.6496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45c4c5b5b5b5b5b5%3A0x0!2sStorgata%2094%2C%209008%20Troms%C3%B8!5e0!3m2!1sno!2sno!4v1706500000000!5m2!1sno!2sno"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+              <div className="p-4 md:p-5">
+                <h3 className="text-white font-medium text-lg mb-1">Tromsø</h3>
+                <p className="text-white/70 text-sm mb-3">Storgata 94, 9008 Tromsø</p>
+                <a
+                  href="https://www.google.com/maps/dir//Storgata+94,+9008+Troms%C3%B8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[var(--color-sage)] hover:text-white text-sm transition-colors"
+                >
+                  <MapPinIcon />
+                  Få veibeskrivelse
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer className="footer py-10 md:py-16">
         <div className="container-wide">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
