@@ -341,8 +341,8 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-4 bg-[var(--color-sage-light)] rounded-3xl -rotate-3"></div>
               <img
-                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=700&fit=crop&crop=center"
-                alt="Moderne klinikkutstyr"
+                src="https://areknuteekspertene.no/wp-content/uploads/2023/10/ELR_klinikk_web_005.jpg"
+                alt="Thomas Hayes - Karkirurg hos Åreknuteekspertene"
                 className="relative rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover"
               />
               {/* Floating badge */}
