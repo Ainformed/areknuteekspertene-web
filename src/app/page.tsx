@@ -208,12 +208,12 @@ export default function Home() {
 
       {/* Header */}
       <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
-        <div className="container-wide py-5 md:py-4 flex justify-between items-center">
+        <div className="container-wide py-6 md:py-5 flex justify-between items-center">
           <a href="#" className="flex items-center">
             <img
               src="https://areknuteekspertene.no/wp-content/uploads/2023/01/areknute-logo.png"
               alt="Åreknuteekspertene"
-              className="h-14 md:h-16 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </a>
 
