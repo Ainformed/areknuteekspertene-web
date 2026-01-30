@@ -343,7 +343,7 @@ export default function Home() {
               <img
                 src="https://areknuteekspertene.no/wp-content/uploads/2023/10/ELR_klinikk_web_005.jpg"
                 alt="Thomas Hayes - Karkirurg hos Åreknuteekspertene"
-                className="relative rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover"
+                className="relative rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover object-top"
               />
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4">
